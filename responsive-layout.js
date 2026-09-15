@@ -1,0 +1,7 @@
+(() => {
+ const categories=document.querySelector('.activityCategoryTabs'),buttons=document.querySelector('#activityCategoryButtons'),select=document.querySelector('#activityCategoryFilter');
+ if(categories&&buttons){const toggle=document.createElement('button');toggle.type='button';toggle.className='categoryToggle';toggle.setAttribute('aria-controls','activityCategoryButtons');categories.querySelector('strong').after(toggle);let choice=null,lastCompact=null;
+ const apply=()=>{const compact=categories.clientWidth<760;if(lastCompact!==compact){choice=null;lastCompact=compact;}const expanded=!compact||choice===true;categories.classList.toggle('compactCategories',compact);categories.classList.toggle('categoriesCollapsed',!expanded);toggle.hidden=!compact;toggle.disabled=!compact;toggle.setAttribute('aria-expanded',String(expanded));toggle.textContent=(select?.selectedOptions[0]?.textContent||'전체')+' · 활동분류 '+(expanded?'접기':'선택');};
+ toggle.onclick=()=>{choice=toggle.getAttribute('aria-expanded')!=='true';apply();};select?.addEventListener('change',()=>{choice=false;apply();});buttons.addEventListener('click',()=>queueMicrotask(()=>{choice=false;apply();}));new ResizeObserver(apply).observe(categories);new MutationObserver(apply).observe(buttons,{childList:true});apply();}
+ const cards=document.querySelector('#programs');let width=0;new ResizeObserver(()=>{if(Math.abs(cards.clientWidth-width)>1){width=cards.clientWidth;renderPrograms();}}).observe(cards);
+})();

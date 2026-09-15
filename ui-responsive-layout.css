@@ -1,0 +1,45 @@
+/* Container-safe layout; card count and page size share the same JS calculation. */
+#mainContent,#programSearch,#programFilters,.activityCategoryTabs,.applicationLookup{min-width:0;max-width:100%}
+#programSearch #programFilters{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))!important;gap:12px;align-items:end}
+#programFilters>label{min-width:0}#programFilters .keywordFilter{grid-column:auto;min-width:0}
+#programFilters input,#programFilters select{width:100%;min-width:0;max-width:100%}
+#programSearch.compactSearch #toggleSearchFilters{display:inline-flex!important}
+#programSearch.filtersCollapsed #programFilters{display:none!important}
+#programSearch .searchHeading{gap:12px;flex-wrap:wrap}#programSearch .searchHeadingActions{display:flex;flex-wrap:wrap;gap:8px}
+.activityCategoryTabs{position:relative}.categoryToggle{display:none}.compactCategories .categoryToggle{display:inline-flex;margin-left:auto;max-width:100%;white-space:normal}.activityCategoryTabs.categoriesCollapsed #activityCategoryButtons{display:none!important}
+#activityCategoryButtons{display:flex;flex-wrap:wrap;gap:8px;min-width:0}#activityCategoryButtons button{white-space:normal;max-width:100%}
+#programs{gap:20px;min-width:0}#programs>.empty{grid-column:1/-1}#programs>.card{min-width:0;width:100%;max-width:none;overflow-wrap:anywhere;align-content:start}
+#programs .cardTop,#programs .programLabels{flex-wrap:wrap;gap:8px}#programs .card .meta>div{grid-template-columns:5.2em minmax(0,1fr)}#programs .card h2{word-break:keep-all;overflow-wrap:anywhere}
+.applicationLookupForm{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))!important;gap:14px;align-items:end}.applicationLookupForm>label{min-width:0}.applicationLookupForm>label:has(.scrollDateInput){grid-column:span 2}
+.applicationLookupForm .scrollDateInput{grid-template-columns:1.2fr .8fr .8fr;min-width:0}.applicationLookupForm .scrollDateDirect{grid-column:1/-1;justify-self:start;width:auto}.applicationLookupForm .scrollDateInput.isDirect{grid-template-columns:1fr}
+#adminDialog .formGrid>*{min-width:0}#adminDialog .tabs{flex-wrap:wrap}#adminDialog .formActions{display:flex;flex-wrap:wrap;gap:8px}#adminDialog .formActions button{width:auto;max-width:100%}
+#nurimSurveyBindingPanel{border:2px solid #17664c;background:#f0f8f4;padding:18px;border-radius:12px;margin:16px 0}#nurimSurveyBindingPanel select{width:100%;min-width:0}#nurimSurveyBindingPanel .bindingActions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+#programApplicationStep .legacyApplicationSettings{display:none!important}
+#surveyManage{min-width:0}.surveyList{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:12px;margin-top:16px}.surveyList .row{min-width:0}.surveyList .row strong{overflow-wrap:anywhere}.surveyList .row button{margin:6px 6px 0 0}.surveyFilters{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}.surveyFilters label{flex:1 1 200px;min-width:0}
+.surveyEditorLayout{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:12px;align-items:start}.surveySideTools{position:sticky;top:8px;display:grid;gap:8px;border:1px solid #c9ddd3;background:#f4f9f6;border-radius:10px;padding:8px}.surveySideTools button{font-size:13px;padding:10px 5px}
+#surveyQuestions{min-width:0}#surveyQuestions .surveyQuestion{margin:0 0 10px;padding:0;min-width:0;background:white;overflow:hidden;border:1px solid #c3d8cd;border-radius:10px}#surveyQuestions .surveyQuestion[open]{border-left:4px solid #17664c}#surveyQuestions .surveyQuestion>summary{display:flex;gap:10px;align-items:center;cursor:pointer;padding:14px;min-height:56px;list-style:none}#surveyQuestions .surveyQuestion>summary:after{content:'편집';margin-left:auto;font-size:12px;color:#476a5d}#surveyQuestions .surveyQuestion[open]>summary:after{content:'접기'}#surveyQuestions .questionTitle{flex:1;min-width:0;overflow-wrap:anywhere}#surveyQuestions .questionType{font-size:12px;color:#527266}.questionEditorBody{padding:0 14px 14px}.questionHeaderFields{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:12px}#surveyQuestions label{margin:8px 0;min-width:0}#surveyQuestions textarea{min-height:42px;resize:vertical}#surveyQuestions input[type=checkbox]{width:auto}.questionToggles{display:flex;flex-wrap:wrap;gap:14px}.questionToggles label{display:flex!important;gap:6px;align-items:center}.surveyOptions{display:grid;gap:6px}.surveyOption{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}.surveyOption label{margin:0!important}.surveyOption textarea{margin:0}.surveyOption button{font-size:12px}.surveyContext{border-radius:10px;margin-bottom:12px}#surveyManage .surveyContext textarea{min-height:50px;width:100%}
+@media(max-width:620px){.applicationLookupForm>label:has(.scrollDateInput){grid-column:1/-1}.surveyEditorLayout{grid-template-columns:minmax(0,1fr)}.surveySideTools{position:sticky;bottom:0;top:auto;display:flex;flex-wrap:wrap;justify-content:center;grid-row:2;z-index:2}.questionHeaderFields{grid-template-columns:minmax(0,1fr)}.questionType{display:none}#adminDialog .formActions button{flex:1 1 140px}.searchHeadingActions button{flex:1 1 140px}.surveyOption{grid-template-columns:minmax(0,1fr) auto}}
+html.a11yHighContrast #surveyQuestions .surveyQuestion,html.a11yHighContrast .surveySideTools,html.a11yHighContrast #nurimSurveyBindingPanel{background:#000!important;color:#fff!important;border-color:#fff!important}
+
+#surveyManage .surveyMainActions{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:18px 0}#surveyManage .surveyMainActions button{width:100%;margin:0;min-width:0}.surveyAdminGuide{padding:12px 16px;background:#f1f7f4;border:1px solid #d0e2d9;border-radius:10px;font-size:14px;line-height:1.7}.surveyAdminGuide p{margin:6px 0}html.a11yHighContrast .surveyAdminGuide{background:#000!important;color:#fff!important}
+
+body>.topbar,body>#mainContent{box-sizing:border-box;width:calc(100% - 32px);max-width:1680px;margin-left:auto;margin-right:auto}body>#mainContent{padding:24px 0 30px}#mainContent>.betaNotice{width:100%;max-width:none;margin:0 0 16px;box-sizing:border-box}#nurimSurveyBindingPanel{min-width:0;max-width:100%;box-sizing:border-box}#nurimSurveyBindingPanel>label{display:block;min-width:0;max-width:100%}#nurimSurveyBindingPanel select{display:block;box-sizing:border-box;max-width:100%;width:100%}#nurimProgramAddress{display:none}@media(max-width:620px){body>.topbar,body>#mainContent{width:calc(100% - 24px)}}
+/* v90 신청내역 조회: 모든 입력과 버튼의 기준선을 통일 */
+#applicationLookupForm{display:grid;grid-template-columns:minmax(140px,1fr) minmax(380px,2fr) minmax(160px,1fr) minmax(150px,.8fr)!important;gap:16px;align-items:end}
+#applicationLookupForm>label{display:flex;flex-direction:column;gap:8px;margin:0;min-width:0}
+#applicationLookupForm>label:has(.scrollDateInput){grid-column:auto}
+#applicationLookupForm input:not(.scrollDateNative),#applicationLookupForm select,#applicationLookupForm button,#applicationLookupForm .scrollDateNativeVisible{box-sizing:border-box;height:44px;min-height:44px;margin:0;width:100%;min-width:0}
+#applicationLookupForm .scrollDateInput{display:grid;grid-template-columns:1.15fr .8fr .8fr auto;gap:6px;width:100%;margin:0;align-items:center}
+#applicationLookupForm .scrollDateDirect{grid-column:auto;white-space:nowrap;padding:0 12px;justify-self:stretch}
+#applicationLookupForm .scrollDateInput.isDirect{grid-template-columns:minmax(0,1fr) auto}
+#applicationLookupForm .isDirect .scrollDateNativeVisible{grid-column:1;grid-row:1}
+#applicationLookupForm .isDirect .scrollDateDirect{grid-column:2;grid-row:1}
+@media(max-width:1100px){#applicationLookupForm{grid-template-columns:minmax(150px,1fr) minmax(380px,2fr)!important}}
+@media(max-width:700px){#applicationLookupForm{grid-template-columns:minmax(0,1fr)!important}#applicationLookupForm>label:has(.scrollDateInput){grid-column:auto}}
+@media(max-width:430px){#applicationLookupForm .scrollDateInput:not(.isDirect){grid-template-columns:1.2fr 1fr 1fr}#applicationLookupForm .scrollDateInput:not(.isDirect) .scrollDateDirect{grid-column:1/-1}}
+
+/* v92: wide activity lists have no disclosure control. */
+.activityCategoryTabs > .categoryToggle[hidden]{display:none!important}
+.activityCategoryTabs.compactCategories > .categoryToggle:not([hidden]){display:inline-flex;margin-left:auto}
+
+#applicationFileList{padding-left:24px;margin:12px 0}#applicationFileList li{padding:6px 0;overflow-wrap:anywhere}#applicationFileList li button{margin-left:12px;min-height:44px}#applicantFile{max-width:100%}

@@ -1,0 +1,502 @@
+:root{--ink:#17202a;--muted:#667085;--line:#d7dee8;--soft:#f4f7fb;--accent:#126b5d;--danger:#b42318}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(180deg,#edf4f9 0%,#fff 42%);color:var(--ink);font-family:"Segoe UI","Malgun Gothic",system-ui,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border-radius:8px;border:1px solid var(--line);padding:10px 13px;background:#fff;font-weight:700}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:11px 12px}label{display:grid;gap:7px;color:#344054;font-size:14px;font-weight:700}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:28px clamp(18px,4vw,52px) 18px}.topbar p{margin:0 0 6px;color:var(--accent);font-weight:800}.topbar h1{margin:0;font-size:clamp(30px,5vw,46px);letter-spacing:0}main{padding:0 clamp(18px,4vw,52px) 48px}.filters{display:grid;grid-template-columns:minmax(180px,1fr) minmax(140px,220px);gap:12px;margin-bottom:18px}.programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.card,.empty,.row{border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.94);padding:18px;box-shadow:0 10px 30px rgba(23,32,42,.08)}.card{display:grid;gap:13px;min-height:370px}.cardTop{display:flex;justify-content:space-between;gap:10px;align-items:center}.badge{border-radius:999px;padding:5px 10px;color:#fff;font-size:13px;font-weight:800}.open{background:var(--accent)}.upcoming{background:#9a6700}.closed{background:#60646c}.count{color:var(--muted);font-size:13px;font-weight:800}.card h2{margin:0;min-height:62px;font-size:23px;line-height:1.35}.meta{display:grid;gap:8px;margin:0}.meta div{display:grid;grid-template-columns:82px 1fr;gap:9px}.meta dt{color:var(--muted);font-size:13px;font-weight:800}.meta dd{margin:0;line-height:1.45}.description{min-height:70px;margin:0;color:#344054;line-height:1.55}.primary{border:0;background:var(--accent);color:#fff}.primary:disabled{background:#98a2b3;cursor:not-allowed}dialog{width:min(1060px,calc(100vw - 24px));max-height:min(880px,calc(100vh - 24px));border:0;border-radius:8px;padding:22px;box-shadow:0 18px 48px rgba(23,32,42,.18)}dialog::backdrop{background:rgba(17,24,39,.42)}.dialogTitle{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.dialogTitle h2{margin:0}.smallLabel{margin:0 0 4px;color:var(--accent);font-size:13px;font-weight:800}.stepper{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:0 0 16px;padding:0;list-style:none}.stepper li{border:1px solid var(--line);border-radius:8px;background:var(--soft);padding:10px 12px;color:var(--muted);font-size:14px;font-weight:800;text-align:center}.stepper li.active{border-color:var(--accent);background:#e7f5f1;color:#0b5147}.formGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:16px}.wide{grid-column:1/-1}.formActions{display:flex;justify-content:flex-end;gap:10px}.formActions.split{justify-content:space-between}.consentIntro,.adminConsentBox{border:1px solid var(--line);border-radius:8px;background:#f8fbfa;padding:14px;margin-bottom:12px}.consentIntro h3,.adminConsentBox h3{margin:0 0 6px;font-size:18px}.consentIntro p,.adminConsentBox p{margin:0;color:#475467;line-height:1.5}.consentItems,.consentEditor,.list{display:grid;gap:10px}.consentItem,.editorItem{border:1px solid var(--line);border-radius:8px;background:#fff;padding:13px}.consentItem summary{cursor:pointer;font-weight:800;color:var(--ink);font-size:16px}.consentText{margin:12px 0;color:#344054;font-size:14px;line-height:1.65;white-space:pre-line}.radioRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.radioRow label,.matrixRow label,.toggleLine,.editorUse{display:flex;grid-template-columns:none;align-items:center;gap:7px}.radioRow label,.matrixRow label{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:#f8fbfa;font-size:14px}.radioRow input,.matrixRow input,.toggleLine input,.editorUse input{width:16px;height:16px}.matrix{display:grid;gap:10px;margin-top:12px}.matrixRow{display:grid;grid-template-columns:minmax(150px,1fr) auto auto;gap:8px;align-items:center;border-top:1px solid var(--line);padding-top:10px}.matrixRow strong{font-size:14px}.consentNotice{margin:10px 0 0;color:#667085;font-size:13px;line-height:1.45}.signatureField{max-width:520px;margin-bottom:16px}.loginBox{display:grid;gap:12px;max-width:440px}.loginBox p{margin:0;color:var(--muted);font-size:13px}.tabs{display:flex;gap:8px;border-bottom:1px solid var(--line);margin-bottom:16px;padding-bottom:10px}.tabs .active{background:var(--ink);color:#fff}.adminForm{border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:14px}.sectionHead,.rowHead,.editorTop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.editorGrid{display:grid;gap:10px}.editorRows{display:grid;gap:8px;margin-top:8px}.editorRow{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end}.smallButton{padding:8px 10px}.row{box-shadow:none}.row h3{margin:0 0 5px;font-size:17px}.row p,.empty{margin:0;color:var(--muted);line-height:1.45}.danger{border:0;background:#fff1f0;color:var(--danger)}.consentTag{display:inline-block;margin-top:8px;border-radius:999px;background:#e7f5f1;color:#0b5147;padding:4px 9px;font-size:13px;font-weight:800}.consentDetail{margin-top:8px;color:#475467;font-size:13px}.hidden{display:none!important}@media(max-width:720px){.filters,.formGrid,.stepper,.matrixRow,.editorRow{grid-template-columns:1fr}.topbar{align-items:flex-start}dialog{padding:16px}.card h2{min-height:auto}.sectionHead,.rowHead,.editorTop,.formActions,.formActions.split{display:grid;grid-template-columns:1fr}.formActions button{width:100%}}.applicationFileBox,.adminFileBox{border:1px solid var(--line);border-radius:8px;background:#f8fbfa;padding:14px;margin:0 0 16px}.applicationFileBox h3,.adminFileBox h3{margin:0 0 6px;font-size:18px}.applicationFileBox p,.adminFileBox p,.fileHint,.fileInfo{margin:0;color:#475467;line-height:1.5}.downloadLink{display:inline-flex;align-items:center;justify-content:center;width:max-content;max-width:100%;border-radius:8px;background:#e7f5f1;color:#0b5147;text-decoration:none;font-weight:800;padding:10px 12px;margin:10px 0}.formEditor{display:grid;gap:10px}.fileInfo{border:1px dashed var(--line);border-radius:8px;background:#fff;padding:10px}.fileDownload{display:inline-block;margin-top:8px;color:#0b5147;font-weight:800;text-decoration:none}.fileWarning{border:1px solid #f6c56b;border-radius:8px;background:#fff8e6;color:#7a4b00;padding:10px;margin:8px 0}.downloadLink.disabled{background:#eef2f6;color:#667085;pointer-events:none}.templateRequired{border-color:#f6c56b;background:#fffdf5}
+
+/* Bupyeong welfare visual refresh */
+:root{
+  --ink:#17324d;
+  --muted:#5c7084;
+  --line:#d5e4ee;
+  --soft:#f1f7fb;
+  --accent:#1460a5;
+  --accent-strong:#0b477e;
+  --fresh:#25a792;
+  --sun:#df8b20;
+  --sky:#4c91c8;
+  --danger:#c0392b;
+}
+body{
+  background:
+    radial-gradient(circle at 10% 0%, rgba(20,96,165,.13), transparent 32%),
+    radial-gradient(circle at 88% 5%, rgba(37,167,146,.13), transparent 30%),
+    linear-gradient(180deg,#f4f9fc 0%,#ffffff 50%);
+}
+.topbar{
+  position:relative;
+  background:rgba(255,255,255,.92);
+  border-bottom:1px solid #d7e6f0;
+  box-shadow:0 8px 28px rgba(20,96,165,.08);
+}
+.topbar:before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:6px;
+  background:linear-gradient(90deg,var(--accent) 0 58%,var(--fresh) 58% 100%);
+}
+.topbar p{color:var(--accent-strong)}
+.topbar h1{color:#173b5d}
+button{border-color:#cfdeea;color:#24435f}
+.primary{background:linear-gradient(135deg,var(--accent),#1975be);box-shadow:0 8px 18px rgba(20,96,165,.2)}
+.primary:hover{background:linear-gradient(135deg,var(--accent-strong),var(--accent))}
+.tabs .active{background:linear-gradient(135deg,var(--accent),var(--fresh))}
+.card{
+  border-color:#d6e5ef;
+  border-top:4px solid var(--accent);
+  background:linear-gradient(180deg,#ffffff 0%,#f9fcfe 100%);
+  box-shadow:0 14px 34px rgba(20,72,112,.09);
+}
+.card:hover{transform:translateY(-2px);transition:transform .18s ease,box-shadow .18s ease;box-shadow:0 18px 40px rgba(20,72,112,.14)}
+.badge.open,.open{background:var(--accent)}
+.badge.upcoming,.upcoming{background:var(--sun)}
+.badge.closed,.closed{background:#6d7d80}
+.count{color:var(--accent-strong)}
+.filters,.adminForm,.consentIntro,.adminConsentBox,.adminFileBox,.applicationFileBox{
+  background:rgba(255,255,255,.86);
+  border-color:#d6e5ef;
+}
+.filters{padding:14px;border:1px solid #d6e5ef;border-radius:8px;box-shadow:0 8px 24px rgba(20,72,112,.05)}
+input:focus,select:focus,textarea:focus{
+  outline:3px solid rgba(37,167,146,.2);
+  border-color:var(--accent);
+}
+.dialogTitle h2,.consentIntro h3,.adminConsentBox h3,.adminFileBox h3,.applicationFileBox h3{color:#1d3438}
+.stepper li.active{border-color:var(--accent);background:#e9f3fb;color:var(--accent-strong)}
+.downloadLink{background:#e9f3fb;color:var(--accent-strong);border:1px solid #b8d3e6}
+.downloadLink:hover{background:#dcecf7}
+.fileWarning{border-color:#f6c56b;background:#fff9ec;color:#7a4b00}
+.consentTag{background:#e4f5f2;color:#126f61}
+.danger{background:#fff0ed;color:var(--danger)}
+.empty{background:#f6fafc;border-color:#d6e5ef;color:#5c7084}
+
+/* Logo area */
+.brandBlock{display:flex;align-items:center;gap:14px}
+.brandLogo{width:58px;height:58px;display:grid;place-items:center;flex:0 0 auto}
+.brandLogo img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:720px){.brandBlock{align-items:flex-start}.brandLogo{width:50px;height:50px}}
+
+/* Incheon-wide program information */
+.centerName{margin:0;color:var(--accent-strong);font-size:14px;font-weight:800}
+.centerName span{color:var(--fresh);font-size:10px;margin-right:3px}
+.feeBox{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid #b8ddd6;border-radius:8px;background:#edf8f6;padding:11px 13px}
+.feeBox span{color:#397067;font-size:13px;font-weight:800}.feeBox strong{color:#106d5f;font-size:17px}
+.cardActions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto}
+.publicTemplateLink{grid-column:1/-1;display:flex;align-items:center;justify-content:center;border:1px solid #b8ddd6;border-radius:8px;background:#edf8f6;color:#126f61;text-decoration:none;font-weight:800;padding:10px 12px}.publicTemplateLink:hover{border-color:var(--fresh);background:#e1f4f0}
+.detailLink{display:flex;align-items:center;justify-content:center;border:1px solid var(--fresh);border-radius:8px;color:#126f61;font-weight:800;text-decoration:none;padding:10px 12px;background:#fff}
+.detailLink:hover{background:#e8f6f3}.detailLink.disabled{border-color:var(--line);color:var(--muted);background:#f4f6f7}
+.card{min-height:470px}.card h2{min-height:auto}
+@media(max-width:440px){.cardActions{grid-template-columns:1fr}.topbar h1{font-size:26px}}
+
+/* Detailed search */
+.searchPanel{margin-bottom:12px;border:1px solid #cbdfea;border-radius:12px;background:linear-gradient(135deg,rgba(235,245,251,.96),rgba(239,249,247,.96));padding:18px;box-shadow:0 10px 28px rgba(20,72,112,.08)}
+.searchHeading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px}.searchHeading p{margin:0 0 3px;color:var(--accent);font-size:13px;font-weight:800}.searchHeading h2{margin:0;font-size:24px}.searchHeading button{color:var(--accent-strong)}
+.searchPanel .filters{grid-template-columns:minmax(220px,1.5fr) repeat(4,minmax(135px,1fr));margin:0;padding:0;border:0;background:none;box-shadow:none}
+.resultSummary{margin:0 0 14px;color:#315f7f;font-size:14px;font-weight:800}
+.programLabels{display:flex;align-items:center;gap:10px}.programTagGroup{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-left:auto;flex-wrap:wrap}.ageTag{flex:0 0 auto;border-radius:999px;background:#e7f2fa;color:#175b94;padding:5px 9px;font-size:12px;font-weight:800}
+@media(max-width:900px){.searchPanel .filters{grid-template-columns:repeat(2,minmax(0,1fr))}.keywordFilter{grid-column:1/-1}}
+@media(max-width:560px){.searchHeading{align-items:stretch;display:grid}.searchPanel .filters{grid-template-columns:1fr}.keywordFilter{grid-column:auto}.searchHeading button{width:100%}}
+
+/* Role-based administration */
+.adminIdentity{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #cbdfea;border-radius:8px;background:#eef6fb;padding:11px 13px;margin-bottom:13px}.adminIdentity>div{display:flex;align-items:center;gap:9px;flex-wrap:wrap}#adminRoleBadge{border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--fresh));color:#fff;padding:5px 9px;font-size:12px;font-weight:800}
+.superGrid{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(360px,1.2fr);gap:14px}.superGrid h3{margin:0 0 6px}.sectionHelp{margin:0 0 14px;color:var(--muted);font-size:14px}.superGrid .adminForm{display:grid;gap:13px}.accountRow{display:flex;align-items:center;justify-content:space-between;gap:12px}.accountRow p{margin-top:4px}.managerCenter{margin:0 0 4px!important;color:var(--accent-strong)!important;font-size:13px;font-weight:800}
+@media(max-width:800px){.superGrid{grid-template-columns:1fr}.adminIdentity,.accountRow{align-items:stretch;display:grid}.tabs{overflow-x:auto}.tabs button{white-space:nowrap}}
+
+/* Applicant files and Drive handoff */
+.applicantTools{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid #cbdfea;border-radius:10px;background:#eef6fb;padding:14px;margin-bottom:13px}.applicantTools h3{margin:0 0 4px}.applicantTools p{margin:0;color:var(--muted);font-size:14px}.driveFolderLink,.fileDownload{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;background:linear-gradient(135deg,var(--accent),#1975be);color:#fff;text-decoration:none;font-weight:800;padding:10px 13px}.driveFolderLink{white-space:nowrap}.driveFolderLink:hover,.fileDownload:hover{background:linear-gradient(135deg,var(--accent-strong),var(--accent))}
+.submittedFile{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid #b8ddd6;border-radius:8px;background:#edf8f6;padding:11px 12px;margin-top:12px}.submittedFile>div{display:grid;gap:3px}.submittedFile span{color:#397067;font-size:13px}.submittedFile strong{color:#173b5d}.submittedFile.emptyFile{color:var(--muted);border-color:var(--line);background:#f6f8fa}
+@media(max-width:620px){.applicantTools,.submittedFile{align-items:stretch;display:grid}.driveFolderLink,.fileDownload{width:100%}}
+
+/* Per-manager Drive folders and application details */
+.applicationDetails{margin-top:12px;border:1px solid #cbdfea;border-radius:9px;background:#f8fbfd;padding:12px}.applicationDetails summary{cursor:pointer;color:var(--accent-strong);font-weight:800}.applicationDetails h4{margin:16px 0 8px;color:#173b5d}.applicationDetailGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:13px}.applicationDetailGrid>div,.consentResponseList>div{border:1px solid #dce8f0;border-radius:7px;background:#fff;padding:9px 10px}.applicationDetailGrid dt,.consentResponseList dt{color:var(--muted);font-size:12px;font-weight:800}.applicationDetailGrid dd,.consentResponseList dd{margin:4px 0 0;color:var(--ink);line-height:1.45}.applicationDetailGrid .fullDetail{grid-column:1/-1}.consentResponseList{display:grid;gap:7px;margin:0}.consentResponseList>div{display:flex;align-items:center;justify-content:space-between;gap:12px}.consentResponseList dd.agreed{color:#126f61;font-weight:800}.consentResponseList dd.disagreed{color:var(--danger);font-weight:800}
+.accountInfo{display:grid;gap:9px;min-width:0}.accountInfo label{font-size:13px}.accountActions{display:flex;align-items:center;gap:8px}.accountActions a{color:var(--accent);font-weight:800;text-decoration:none}.accountActions button{padding:8px 10px}
+@media(max-width:620px){.applicationDetailGrid{grid-template-columns:1fr}.applicationDetailGrid .fullDetail{grid-column:auto}.consentResponseList>div,.accountActions{align-items:stretch;display:grid}}
+
+/* Applicants grouped by program */
+.applicantProgramTabs{display:flex;gap:8px;overflow-x:auto;padding:2px 1px 10px;scrollbar-width:thin}.applicantProgramTabs button{display:flex;align-items:center;gap:9px;flex:0 0 auto;border:1px solid #cbdfea;background:#fff;color:#315f7f;padding:10px 13px;white-space:nowrap}.applicantProgramTabs button strong{display:grid;place-items:center;min-width:24px;height:24px;border-radius:999px;background:#e7f2fa;color:var(--accent);font-size:12px}.applicantProgramTabs button.active{border-color:transparent;background:linear-gradient(135deg,var(--accent),var(--fresh));color:#fff;box-shadow:0 7px 16px rgba(20,96,165,.18)}.applicantProgramTabs button.active strong{background:rgba(255,255,255,.92);color:var(--accent-strong)}
+.applicantProgramGroup{border:1px solid #cbdfea;border-radius:11px;background:#fff;overflow:hidden;box-shadow:0 8px 22px rgba(20,72,112,.06)}.programGroupHeader{display:flex;align-items:center;justify-content:space-between;gap:14px;background:linear-gradient(135deg,#eaf4fa,#edf8f6);padding:14px 16px}.programGroupHeader p{margin:0 0 3px;color:var(--accent);font-size:13px;font-weight:800}.programGroupHeader h3{margin:0;color:#173b5d}.programGroupHeader>span{border-radius:999px;background:var(--accent);color:#fff;padding:6px 10px;font-size:13px;font-weight:800;white-space:nowrap}.programApplicantList{display:grid}.applicantSummaryRow{padding:13px 15px;border-top:1px solid #e1ebf1}.applicantSummaryRow:first-child{border-top:0}.applicantIdentity{display:flex;align-items:center;justify-content:space-between;gap:12px}.applicantIdentity strong{font-size:17px;color:var(--ink)}.applicantIdentity a{color:var(--accent);font-weight:800;text-decoration:none}.applicantSummaryRow .applicationDetails{margin-top:10px}
+@media(max-width:560px){.programGroupHeader,.applicantIdentity{align-items:stretch;display:grid}.programGroupHeader>span{width:max-content}}
+.applicationLookup{margin:34px 0 10px;padding:26px;border:1px solid #c7dde8;border-radius:20px;background:linear-gradient(135deg,#f5fbff 0%,#f4fbf8 100%);box-shadow:0 12px 32px rgba(0,91,160,.08)}
+.applicationLookup h2{margin:2px 0 6px}
+.applicationLookupForm{display:grid;grid-template-columns:minmax(180px,1fr) minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:18px}
+.applicationLookupForm label{display:grid;gap:7px;font-weight:700}
+.applicationLookupResult{display:grid;gap:10px;margin-top:18px}
+.lookupResultCard{padding:16px;border:1px solid #d4e3eb;border-radius:14px;background:#fff}
+.lookupResultCard h3,.lookupResultCard p{margin:0 0 6px}
+.applicationDeleteButton{margin-top:12px}
+.centerDriveSettings{margin-top:18px}
+.centerDriveRow{display:grid;grid-template-columns:minmax(180px,.7fr) minmax(260px,1.5fr) auto;gap:10px;align-items:end;padding:14px 0;border-top:1px solid #dfe8ed}
+.centerDriveRow label{display:grid;gap:6px}
+@media(max-width:760px){.applicationLookupForm,.centerDriveRow{grid-template-columns:1fr}}
+.centerConsentTool{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;padding:18px;border:1px solid #c9dce7;border-radius:16px;background:#f6fbfe}
+.centerConsentTool h3,.centerConsentTool p{margin:0 0 5px}
+.centerConsentOverview{margin-top:18px}
+.centerConsentButtons{display:flex;flex-wrap:wrap;gap:9px}
+.centerConsentDialog{width:min(760px,calc(100vw - 28px));border:0;border-radius:20px;padding:0;box-shadow:0 24px 80px rgba(12,51,73,.3)}
+.centerConsentDialog::backdrop{background:rgba(10,30,45,.55)}
+.centerConsentDialog form{padding:24px}
+.centerConsentFields{display:grid;gap:14px;margin-top:18px}
+.centerConsentFields label{display:grid;gap:7px;font-weight:700}
+.centerConsentFields textarea{min-height:320px;white-space:pre-wrap}
+@media(max-width:620px){.centerConsentTool{align-items:stretch;display:grid}}
+
+.printRosterButton,.printApplicationButton{border-color:#94b7ca;background:#fff;color:var(--accent-strong);padding:8px 10px}.printRosterButton:hover,.printApplicationButton:hover{border-color:var(--accent);background:#eef7fb}.printApplicationButton{margin-left:9px;font-size:13px}@media(max-width:620px){.printRosterButton,.printApplicationButton{width:100%;margin-left:0}}
+
+.programPrintTools{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px}.programPrintTools>span{border-radius:999px;background:var(--accent);color:#fff;padding:6px 10px;font-size:13px;font-weight:800;white-space:nowrap}.programPrintTools button{border-color:#94b7ca;background:#fff;color:var(--accent-strong);padding:8px 10px}.selectAllApplicants,.applicantSelect{display:inline-flex;align-items:center;gap:6px;color:#315f7f;font-size:13px;font-weight:800;white-space:nowrap}.selectAllApplicants input,.applicantSelect input{width:18px;height:18px;margin:0;accent-color:var(--accent)}.applicantIdentity{justify-content:flex-start}.applicantIdentity>a{margin-left:auto}.applicantSelect{padding-right:4px}.printSelectedApplications{background:#eef7fb!important}.printAllApplications{background:#edf8f6!important}@media(max-width:700px){.programPrintTools{align-items:stretch;display:grid;grid-template-columns:1fr 1fr;width:100%}.programPrintTools>span,.selectAllApplicants{grid-column:1/-1}.programPrintTools button{width:100%}.applicantIdentity>a{margin-left:0}}
+.globalConsentEditor { margin-top: 18px; }
+.globalConsentItems { display: grid; gap: 12px; margin-top: 12px; }
+.globalConsentItem { display: grid; gap: 10px; padding: 16px; border: 1px solid var(--line, #d8dee8); border-radius: 12px; background: #fff; }
+.globalConsentItem label { display: grid; gap: 6px; font-weight: 700; }
+.globalConsentItem textarea { min-height: 110px; resize: vertical; }
+.applicationEditDialog { width: min(680px, calc(100% - 28px)); border: 0; border-radius: 18px; padding: 0; }
+.applicationEditDialog::backdrop { background: rgba(15, 23, 42, .58); }
+.applicationEditDialog form { padding: 22px; }
+.applicantSummaryRow .applicationEditButton,
+.applicantSummaryRow .applicationDeleteButton { margin-left: 8px; }
+/* Mobile-only lightweight view. Desktop layout remains unchanged. */
+@media (max-width: 600px) {
+  html { -webkit-text-size-adjust: 100%; }
+  body { background: #f5f8fa; }
+  button, input, select, textarea { min-height: 46px; font-size: 16px; }
+  .topbar { align-items: center; padding: 14px 14px 10px; background: #fff; border-bottom: 1px solid #dfe8ed; }
+  .brandBlock { align-items: center; gap: 10px; min-width: 0; }
+  .brandLogo { width: 42px; height: 42px; flex: 0 0 42px; }
+  .brandBlock > div:last-child { min-width: 0; }
+  .topbar p { display: none; }
+  .topbar h1 { font-size: 22px; white-space: nowrap; }
+  #adminOpen { min-height: 40px; padding: 8px 11px; font-size: 13px; }
+  main { padding: 10px 12px 28px; }
+  .searchPanel { padding: 14px; border-radius: 14px; }
+  .searchHeading h2 { font-size: 20px; }
+  .searchHeading p { font-size: 12px; }
+  .searchPanel .filters { gap: 9px; margin-bottom: 0; }
+  .resultSummary { margin: 12px 2px; font-size: 13px; }
+  .programs { grid-template-columns: 1fr; gap: 11px; }
+  .card { gap: 10px; min-height: 0; padding: 15px; border-radius: 14px; box-shadow: 0 5px 16px rgba(20,72,112,.07); }
+  .card:hover { transform: none; }
+  .card h2 { min-height: 0; font-size: 19px; }
+  .card .meta { gap: 6px; }
+  .card .meta div { grid-template-columns: 72px minmax(0,1fr); }
+  .card .meta dd { overflow-wrap: anywhere; }
+  .card .description { display: -webkit-box; min-height: 0; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; font-size: 14px; }
+  .cardActions { grid-template-columns: 1fr; gap: 8px; }
+  .cardActions button, .cardActions a { width: 100%; min-height: 46px; }
+  .applicationLookup { margin: 20px 0 4px; padding: 16px; border-radius: 14px; }
+  .applicationLookup h2 { font-size: 20px; }
+  .applicationLookupForm { gap: 9px; margin-top: 12px; }
+
+  dialog, #applyDialog, #adminDialog, .applicationEditDialog, .centerConsentDialog {
+    width: 100vw; max-width: none; height: 100dvh; max-height: 100dvh;
+    margin: 0; padding: 14px; border-radius: 0; overflow-y: auto;
+  }
+  .applicationEditDialog form, .centerConsentDialog form { padding: 0; }
+  .dialogTitle { position: sticky; top: -14px; z-index: 5; margin: -14px -14px 14px; padding: 12px 14px; background: rgba(255,255,255,.96); border-bottom: 1px solid #e1e8ed; backdrop-filter: blur(8px); }
+  .dialogTitle h2 { font-size: 20px; }
+  .stepper { position: sticky; top: 59px; z-index: 4; background: #fff; padding: 5px 0; }
+  .formGrid { gap: 11px; }
+  .consentItem { padding: 12px; }
+  .consentItem summary { font-size: 15px; }
+  .consentText { font-size: 13px; line-height: 1.6; }
+  .radioRow { display: grid; grid-template-columns: 1fr; }
+  .radioRow label, .matrixRow label { min-height: 46px; }
+  .signatureField { max-width: none; }
+  .formActions, .formActions.split { gap: 8px; }
+  .formActions button { min-height: 48px; }
+
+  .adminIdentity { gap: 8px; padding: 10px; }
+  .tabs { position: sticky; top: 58px; z-index: 3; margin: 0 -14px 14px; padding: 8px 14px; background: #fff; }
+  .tabs button { flex: 0 0 auto; min-height: 42px; padding: 8px 11px; }
+  .adminForm, .adminFileBox, .globalConsentItem { padding: 13px; border-radius: 12px; }
+  .row { padding: 13px; }
+  .rowHead > div:last-child { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .rowHead button { width: 100%; margin: 0; }
+  .programGroupHeader { padding: 12px; }
+  .applicantSummaryRow { padding: 12px; }
+  .applicantSummaryRow .applicationEditButton,
+  .applicantSummaryRow .applicationDeleteButton { width: 100%; margin: 8px 0 0; }
+  .programPrintTools { grid-template-columns: 1fr; }
+  .programPrintTools > span, .selectAllApplicants { grid-column: auto; }
+  .applicantProgramTabs { margin-right: -12px; padding-right: 12px; }
+  .superGrid { gap: 10px; }
+}
+/* Responsive two-row program pages */
+.programs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (min-width: 1440px) { .programs { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 620px) and (max-width: 899px) { .programs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 619px) { .programs { grid-template-columns: 1fr; } }
+.programPagination { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 7px; margin: 22px 0 8px; }
+.programPagination button { min-width: 42px; min-height: 42px; padding: 8px 11px; border-color: #b9ceda; color: var(--accent-strong); }
+.programPagination button.active { border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--fresh)); color: #fff; }
+.programPagination button:disabled { opacity: .45; cursor: not-allowed; }
+.programPageStatus { color: var(--muted); font-size: 13px; font-weight: 800; padding: 0 4px; }
+@media (max-width: 619px) {
+  .programPagination { display: grid; grid-template-columns: repeat(3, auto); gap: 6px; margin-top: 16px; }
+  .programPagination button:not(:first-child):not(:last-child) { display: none; }
+  .programPageStatus { text-align: center; }
+}
+.yearInput { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 9px; }
+.yearInput strong { min-width: 24px; color: var(--ink); font-size: 16px; }
+.signatureBlock { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 16px; margin-bottom: 16px; }
+.signatureBlock .signatureField { margin: 0; }
+.signatureBlock p { margin: 0 0 11px; padding: 10px 13px; border-radius: 9px; background: #eef6fb; color: var(--accent-strong); white-space: nowrap; }
+@media (max-width: 600px) { .signatureBlock { grid-template-columns: 1fr; gap: 8px; } .signatureBlock p { margin: 0; text-align: center; } }
+/* Full-width super-admin manager layout */
+.superGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+.superGrid > div { display: contents; }
+#searchConfigForm { grid-column: 1; }
+#superPasswordForm { grid-column: 2; }
+#managerForm { grid-column: 1 / -1; }
+#managerList { grid-column: 1 / -1; display: grid; gap: 12px; }
+#managerList .accountRow { display: block; width: 100%; padding: 18px; }
+#managerList .accountInfo { display: grid; gap: 15px; width: 100%; }
+.managerCardHeader { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid #dfe8ed; }
+.managerCardHeader strong { color: var(--ink); font-size: 18px; }
+.managerCardHeader p { margin: 4px 0 0; color: var(--muted); }
+.managerSettingsGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-items: end; }
+.managerSetting { display: grid; grid-template-rows: 1fr auto; gap: 8px; min-width: 0; }
+.managerSetting label { min-width: 0; }
+.managerSetting input, .managerSetting select { min-width: 0; }
+.managerSetting button { width: 100%; min-height: 42px; }
+@media (max-width: 1100px) {
+  .managerSettingsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 800px) {
+  .superGrid { grid-template-columns: 1fr; }
+  #searchConfigForm, #superPasswordForm, #managerForm, #managerList { grid-column: 1; }
+}
+@media (max-width: 600px) {
+  #managerList .accountRow { padding: 14px; }
+  .managerCardHeader { align-items: stretch; display: grid; }
+  .managerCardHeader .deleteManager { width: 100%; }
+  .managerSettingsGrid { grid-template-columns: 1fr; }
+}
+/* Admin program organization, visibility and selection status */
+.adminProgramControls { display: grid; gap: 14px; margin: 22px 0 14px; padding: 18px; border: 1px solid #dce7ed; border-radius: 14px; background: #f8fbfc; }
+.adminProgramControls h3, .adminProgramControls p { margin: 0; }
+.adminProgramControls p { margin-top: 4px; color: var(--muted); }
+.adminProgramCenterTabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 3px; }
+.adminProgramCenterTabs button { flex: 0 0 auto; min-height: 40px; padding: 8px 14px; }
+.adminProgramCenterTabs button.active { border-color: transparent; background: var(--accent-strong); color: #fff; }
+.adminProgramFilterRow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 260px)); gap: 12px; }
+.adminProgramBadges { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin: 8px 0; }
+.adminProgramBadges > span:not(.badge), .applicationQueueTag { padding: 4px 9px; border-radius: 999px; background: #eef4f7; color: #39566a; font-size: 12px; font-weight: 800; }
+.adminProgramBadges .hiddenState { background: #fbe9ed; color: #a32f4d; }
+.adminProgramBadges .publicState { background: #e4f7ed; color: #20764a; }
+.toggleVisibility { white-space: nowrap; }
+.applicationQueueTag { display: inline-flex; }
+@media (max-width: 600px) { .adminProgramFilterRow { grid-template-columns: 1fr; } .adminProgramControls { padding: 13px; } }
+/* v23: recruitment method, compact lookup cards and promotion image */
+.badgeGroup { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
+.selectionBadge { display: inline-flex; align-items: center; border-radius: 999px; padding: 5px 10px; color: #fff; font-size: 13px; font-weight: 800; }
+.selectionBadge.first_come { background: #356a9a; }
+.selectionBadge.lottery { background: #7a4ba3; }
+.promotionImageAdmin { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+.applicationLookupResult { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch; }
+.lookupResultCard { display: grid; align-content: start; gap: 9px; min-width: 0; padding: 16px; }
+.lookupResultCard h3, .lookupResultCard p { margin: 0; }
+.lookupCardHead { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.lookupCardHead h3 { font-size: 17px; line-height: 1.35; }
+.lookupCardHead strong { flex: 0 0 auto; border-radius: 999px; padding: 4px 8px; background: #e7f5f1; color: #0b5147; font-size: 12px; }
+.lookupCenter { color: var(--accent-strong); font-weight: 800; }
+.lookupDetails { display: grid; gap: 7px; margin: 0; }
+.lookupDetails div { display: grid; gap: 2px; }
+.lookupDetails dt { color: var(--muted); font-size: 12px; font-weight: 800; }
+.lookupDetails dd { margin: 0; overflow-wrap: anywhere; line-height: 1.4; }
+.lookupDetails a { color: var(--accent-strong); font-weight: 800; }
+@media (max-width: 1200px) { .applicationLookupResult { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .applicationLookupResult { grid-template-columns: 1fr; } .promotionImageAdmin { grid-template-columns: 1fr; } }
+/* v24 신청 수정·취소·삭제 이력 */
+.applicationLookupForm{grid-template-columns:minmax(150px,1fr) minmax(170px,1fr) minmax(180px,1fr) auto}
+.lookupActions{display:flex;gap:8px;margin-top:12px}.lookupActions button{flex:1}
+.lookupContactNotice{margin:12px 0 0;padding:10px;border-radius:8px;background:#f4f6f7;color:#536573;font-size:13px}
+.lifecycleTag,.applicationQueueTag{display:inline-flex;align-items:center;border-radius:999px;padding:5px 10px;font-weight:800;font-size:12px}
+.lifecycleTag.received,.applicationQueueTag.received{background:#e8f2fb;color:#165c93}
+.lifecycleTag.modified,.applicationQueueTag.modified{background:#fff0d8;color:#9a5a00}
+.lifecycleTag.cancelled,.applicationQueueTag.cancelled{background:#fde5e5;color:#b42318}
+.lifecycleTag.deleted,.applicationQueueTag.deleted{background:#e8eaed;color:#444b55}
+.applicantSummaryRow.lifecycle-modified{border-left:5px solid #e99a23}.applicantSummaryRow.lifecycle-cancelled{border-left:5px solid #d33b32;background:#fff8f8}.applicantSummaryRow.lifecycle-deleted{border-left:5px solid #6b7280;background:#f3f4f6;opacity:.82}
+@media(max-width:900px){.applicationLookupForm{grid-template-columns:1fr 1fr}.applicationLookupForm button{min-height:44px}}
+@media(max-width:600px){.applicationLookupForm{grid-template-columns:1fr}.lookupActions{flex-direction:column}}
+.applicantSummaryRow .applicationPurgeButton{margin-left:8px;background:#4b5563;border-color:#4b5563;color:#fff}
+
+.programOwnershipTool{margin:18px 0}.ownershipHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.ownershipHeader h3{margin-top:0}.programOwnerRow{display:grid;grid-template-columns:minmax(240px,1fr) minmax(210px,280px) auto;gap:10px;align-items:center;padding:12px 0;border-top:1px solid #dce7ed}.programOwnerRow p{margin:4px 0 0;color:#60727f;font-size:13px}@media(max-width:760px){.ownershipHeader{display:grid}.programOwnerRow{grid-template-columns:1fr}.programOwnerRow button{width:100%}}
+/* v27 화면낭독기·키보드·저시력 접근성 */
+.srOnly{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.skipLinks{position:fixed;top:0;left:0;z-index:10000}.skipLinks a{position:absolute;left:-9999px;top:0;min-width:210px;padding:14px 18px;background:#000;color:#fff;font-weight:900;text-decoration:none}.skipLinks a:focus{position:relative;left:0;display:block;outline:4px solid #ffdf00}
+.accessibilityToolbar{display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:8px max(18px,calc((100vw - 1500px)/2));background:#eef6fa;border-bottom:1px solid #c5dae6}.accessibilityToolbar strong{margin-right:auto}.accessibilityToolbar button{min-height:40px;background:#fff}
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:4px solid #ffbf00!important;outline-offset:3px!important;box-shadow:0 0 0 2px #102f4a!important}
+html.a11yLargeText body{zoom:1.12}html.a11yLargeText input,html.a11yLargeText select,html.a11yLargeText textarea,html.a11yLargeText button{font-size:16px!important;line-height:1.5!important}
+html.a11yHighContrast body,html.a11yHighContrast main,html.a11yHighContrast .searchPanel,html.a11yHighContrast .card,html.a11yHighContrast .applicationLookup,html.a11yHighContrast dialog{background:#000!important;color:#fff!important}
+html.a11yHighContrast :where(h1,h2,h3,h4,p,dt,dd,label,strong,span,summary){color:#fff!important}html.a11yHighContrast :where(.card,.searchPanel,.applicationLookup,dialog,input,select,textarea,button,a){border-color:#ffdf00!important}html.a11yHighContrast :where(input,select,textarea){background:#111!important;color:#fff!important}html.a11yHighContrast :where(button,.primary,a){background:#ffdf00!important;color:#000!important;font-weight:900!important}html.a11yHighContrast .accessibilityToolbar{background:#000!important;border-color:#ffdf00!important}
+@media(max-width:760px){.accessibilityToolbar{display:grid;grid-template-columns:1fr 1fr;padding:10px}.accessibilityToolbar strong{grid-column:1/-1}.accessibilityToolbar button{width:100%}html.a11yLargeText body{zoom:1}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+/* v28 헤더 우측 저시력 편의 설정 */
+.headerUtilities{display:flex;flex-direction:column;align-items:flex-end;gap:7px;margin-left:auto}.headerUtilities .accessibilityToolbar{display:flex;align-items:center;gap:7px;padding:0;background:transparent;border:0}.headerUtilities .accessibilityToolbar button{min-height:36px;padding:7px 11px;background:#fff}.headerUtilities #adminOpen{min-width:76px}
+@media(max-width:720px){.topbar{flex-wrap:wrap}.headerUtilities{gap:6px}.headerUtilities .accessibilityToolbar{display:flex;grid-template-columns:none;padding:0}.headerUtilities .accessibilityToolbar button{width:auto;min-height:34px;padding:6px 9px}.headerUtilities #adminOpen{align-self:flex-end}}
+@media(max-width:480px){.topbar{gap:10px}.headerUtilities{width:100%;display:grid;grid-template-columns:1fr auto;align-items:center}.headerUtilities .accessibilityToolbar{justify-content:flex-start}.headerUtilities #adminOpen{grid-column:2;grid-row:1}}
+/* v29 신청 진행·완료 안내 */
+.applicationSuccessDialog{width:min(460px,calc(100vw - 32px));padding:0;overflow:hidden}
+.applicationSuccessContent{display:grid;justify-items:center;gap:12px;padding:32px 26px;text-align:center}
+.applicationSuccessContent h2{margin:0;color:#123b59;font-size:26px}
+.applicationSuccessContent p{margin:0 0 8px;color:#475467;line-height:1.6}
+.applicationSuccessContent .primary{min-width:150px}
+.successMark{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:#e4f5ef;color:#126b5d;font-size:38px;font-weight:900}
+#applySubmitButton[aria-busy=true],#goConsent[aria-busy=true]{cursor:wait}
+@media(max-width:1180px){.searchPanel .filters{grid-template-columns:repeat(2,minmax(0,1fr))}.keywordFilter{grid-column:1/-1}}
+@media(max-width:560px){.searchPanel .filters{grid-template-columns:1fr}.keywordFilter{grid-column:auto}.applicationSuccessContent{padding:28px 18px}}
+
+/* v30 복합 기능 보강 */
+.headerUtilities{flex-direction:row;align-items:center;gap:9px}.headerUtilities .accessibilityToolbar{order:1}.headerUtilities #adminOpen{order:2;align-self:center}
+.consentAgreeAll{display:flex;grid-template-columns:none;align-items:center;gap:12px;border:2px solid #126b5d;border-radius:8px;background:#eaf7f3;padding:14px 16px;color:#123b59;cursor:pointer}.consentAgreeAll input{width:22px;height:22px;flex:0 0 auto}.consentAgreeAll span{display:grid;gap:3px}.consentAgreeAll small{color:#536573;font-weight:500}
+.applicationRestoreButton{margin-left:8px;border-color:#126b5d;background:#eaf7f3;color:#0b5147}
+#capacity+small{color:#536573;font-weight:500;line-height:1.45}
+@media(max-width:720px){.headerUtilities{flex-direction:row;align-items:center}.headerUtilities #adminOpen{align-self:center}}
+@media(max-width:480px){.headerUtilities{display:flex;width:100%;justify-content:flex-end}.headerUtilities .accessibilityToolbar{justify-content:flex-end}.headerUtilities #adminOpen{grid-column:auto;grid-row:auto}}
+/* v31 프로그램별 추가 신청정보 */
+.adminCustomFieldsBox,.customApplicationFields{border:1px solid #cddfea;border-radius:8px;background:#f7fbfd;padding:16px;margin:0 0 16px}.adminCustomFieldsBox h3,.customApplicationFields h3{margin:0 0 6px}.adminCustomFieldsBox p,.customApplicationFields>p{margin:0;color:#536573;line-height:1.5}
+.applicationFieldEditor,.customApplicationFieldList{display:grid;gap:12px;margin-top:14px}.applicationFieldEditorItem{border:1px solid #d7e3ea;border-radius:8px;background:#fff;padding:14px}.applicationFieldEditorHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.applicationFieldEditorItem .formGrid{margin-bottom:0}.fieldRequiredLine{display:flex;grid-template-columns:none;align-items:center;align-self:end;min-height:44px}.fieldRequiredLine input{width:20px;height:20px}.fieldOptions small{color:#667085;font-weight:500}.customApplicationFieldList{grid-template-columns:repeat(2,minmax(0,1fr))}.customApplicationFieldList label.wide{grid-column:1/-1}.customApplicationFieldList textarea{resize:vertical}
+@media(max-width:620px){.customApplicationFieldList{grid-template-columns:1fr}.customApplicationFieldList label.wide{grid-column:auto}.adminCustomFieldsBox .sectionHead{display:grid}.adminCustomFieldsBox .sectionHead button{width:100%}}
+/* v32 관리자 등록·관리 분리 */
+.programWizardProgress{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px;padding:0;list-style:none}.programWizardProgress li{display:flex;align-items:center;gap:10px;border:1px solid #d5e2ea;border-radius:8px;background:#f3f7fa;padding:12px 14px;color:#647787}.programWizardProgress li span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#dbe5eb;font-weight:900}.programWizardProgress li.active{border-color:#126b5d;background:#eaf7f3;color:#0b5147}.programWizardProgress li.active span{background:#126b5d;color:#fff}
+.programWizardStep{border:1px solid #d5e2ea;border-radius:8px;background:#fff;padding:18px}.wizardStepTitle{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid #dce6ec}.wizardStepTitle h3{margin:2px 0 6px;font-size:22px}.wizardStepTitle>p:last-child{margin:0;color:#60727f;line-height:1.5}
+.adminSectionIntro{display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid #d5e2ea;border-radius:8px;background:#f7fbfd;padding:16px;margin-bottom:16px}.adminSectionIntro h3{margin:2px 0 5px;font-size:22px}.adminSectionIntro p{margin:0;color:#60727f}.adminSectionIntro .primary{flex:0 0 auto}.tabs{overflow-x:auto;scrollbar-width:thin}.tabs button{white-space:nowrap}
+#programApplicationStep>.adminCustomFieldsBox,#programApplicationStep>.adminConsentBox,#programApplicationStep>.adminFileBox{margin-bottom:14px}
+@media(max-width:700px){.programWizardProgress{grid-template-columns:1fr}.programWizardStep{padding:14px}.adminSectionIntro{display:grid}.adminSectionIntro .primary{width:100%}.tabs{display:flex;flex-wrap:nowrap}.tabs button{flex:0 0 auto}}
+/* v33 모바일 큰 글씨: 확대 대신 재배치하여 가로 잘림 방지 */
+@media(max-width:760px){
+  html.a11yLargeText body{zoom:1;font-size:18px;overflow-x:hidden}
+  html.a11yLargeText :where(p,li,dt,dd,label,summary,.description,.consentText,.sectionHelp,.lookupContactNotice){font-size:1rem!important;line-height:1.65!important}
+  html.a11yLargeText :where(input,select,textarea,button){max-width:100%;min-width:0;font-size:17px!important;line-height:1.5!important}
+  html.a11yLargeText button{min-height:48px;white-space:normal;overflow-wrap:anywhere}
+  html.a11yLargeText h1{font-size:clamp(32px,10vw,42px);line-height:1.15}
+  html.a11yLargeText h2{font-size:clamp(24px,7vw,30px);line-height:1.25}
+  html.a11yLargeText h3{font-size:21px;line-height:1.35}
+  html.a11yLargeText :where(.filters,.formGrid,.customApplicationFieldList,.applicationLookupForm,.programOwnerRow,.adminProgramFilterRow,.managerSettingsGrid){grid-template-columns:minmax(0,1fr)!important}
+  html.a11yLargeText :where(.card,.row,.programWizardStep,.adminForm,.adminFileBox,.consentItem,.lookupResultCard){min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+  html.a11yLargeText :where(.cardTop,.badgeGroup,.programLabels,.rowHead,.applicantIdentity,.programGroupHeader,.applicantTools,.ownershipHeader){flex-wrap:wrap}
+  html.a11yLargeText .meta div{grid-template-columns:minmax(0,1fr)!important;gap:3px}
+  html.a11yLargeText .tabs{max-width:100%;overflow-x:auto}
+  html.a11yLargeText :where(img,video,iframe){max-width:100%;height:auto}
+}
+@media(max-width:480px){
+  html.a11yLargeText body{font-size:17px}
+  html.a11yLargeText .topbar{padding-left:14px;padding-right:14px}
+  html.a11yLargeText .headerUtilities{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:stretch}
+  html.a11yLargeText .headerUtilities .accessibilityToolbar{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  html.a11yLargeText .headerUtilities .accessibilityToolbar button{width:100%;padding:7px 8px}
+  html.a11yLargeText .headerUtilities #adminOpen{width:auto;min-width:74px}
+  html.a11yLargeText :where(.formActions,.lookupActions){display:grid;grid-template-columns:1fr;gap:8px}
+  html.a11yLargeText :where(.formActions,.lookupActions) button{width:100%}
+}
+/* v40 최고관리자 기관·프로그램 선택 및 담당자 접이식 목록 */
+.applicantSelectionControls{display:grid;grid-template-columns:minmax(220px,1fr) minmax(360px,1.5fr);align-items:end;gap:18px;margin:0 0 14px;padding:18px;border:1px solid #dce7ed;border-radius:14px;background:#f8fbfc}.applicantSelectionControls h3,.applicantSelectionControls p{margin:0}.applicantSelectionControls p{margin-top:4px;color:var(--muted)}.applicantSelectionRow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.ownershipActions{display:flex;flex-wrap:wrap;gap:8px}.ownershipFilterRow{display:grid;grid-template-columns:minmax(220px,360px) auto;align-items:end;gap:12px;margin:14px 0}.ownershipFilterRow>span{padding-bottom:11px;color:var(--muted);font-weight:800}.managerDirectoryControls{display:grid;grid-template-columns:minmax(240px,1fr) minmax(220px,360px) auto;align-items:end;gap:14px;margin:8px 0 14px;padding:16px;border:1px solid #dce7ed;border-radius:14px;background:#f8fbfc}.managerDirectoryControls h3,.managerDirectoryControls p{margin:0}.managerDirectoryControls p{margin-top:4px;color:var(--muted)}.managerDirectoryControls>span{padding-bottom:11px;color:var(--accent-strong);font-weight:900;white-space:nowrap}#managerList details.accountRow{padding:0;overflow:hidden}#managerList details.accountRow>summary{list-style:none}#managerList details.accountRow>summary::-webkit-details-marker{display:none}.managerSummary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 18px;cursor:pointer}.managerSummary>span:first-child{display:grid;gap:5px}.managerSummary strong{font-size:17px}.managerSummary small{color:var(--muted);font-size:14px}.managerSummaryAction{border:1px solid #b8cedb;border-radius:8px;padding:7px 10px;color:var(--accent-strong);font-size:13px;font-weight:800}details[open]>.managerSummary{border-bottom:1px solid #dfe8ed;background:#f8fbfc}details[open]>.managerSummary .managerSummaryAction{font-size:0}details[open]>.managerSummary .managerSummaryAction::after{content:"접기";font-size:13px}#managerList details.accountRow>.accountInfo{padding:18px}
+@media(max-width:760px){.ownershipFilterRow,.applicantSelectionControls,.managerDirectoryControls{grid-template-columns:1fr}.ownershipActions{display:grid}.ownershipActions button{width:100%}.ownershipFilterRow>span,.managerDirectoryControls>span{padding-bottom:0}.managerSummary{align-items:flex-start}.applicantSelectionRow{grid-template-columns:1fr}}
+/* v41 선택형 Google Form과 홍보지 OCR 초안 */
+.adminGoogleFormBox{display:grid;gap:12px;border:1px solid #cddfea;border-radius:8px;background:#f7fbfd;padding:16px;margin:0 0 16px}.adminGoogleFormBox h3,.adminGoogleFormBox p{margin:0}.adminGoogleFormBox>div>p{margin-top:5px;color:#536573;line-height:1.5}.googleFormIntro{border:1px solid #cddfea;border-radius:8px;background:#f7fbfd;padding:15px;margin-bottom:12px}.googleFormIntro h3,.googleFormIntro p{margin:0}.googleFormIntro p{margin-top:6px;color:#536573;line-height:1.55}.googleFormFrameWrap{height:min(620px,58vh);min-height:430px;border:1px solid #cddfea;border-radius:8px;overflow:hidden;background:#fff}.googleFormFrameWrap iframe{width:100%;height:100%;border:0}.googleFormCompleteCheck{display:flex;grid-template-columns:none;align-items:flex-start;gap:12px;border:2px solid #126b5d;border-radius:8px;background:#eaf7f3;padding:14px 16px;margin:14px 0;cursor:pointer}.googleFormCompleteCheck input{width:22px;height:22px;flex:0 0 auto;margin-top:2px}.googleFormCompleteCheck span{display:grid;gap:4px}.googleFormCompleteCheck small{color:#536573;font-weight:500}.promotionImageAdmin{grid-template-columns:minmax(0,1fr) auto auto}.promotionDraftStatus{border:1px dashed #a9c3d2;border-radius:8px;background:#f8fbfc;padding:11px 13px;color:#536573;line-height:1.5}.promotionDraftStatus strong{color:#0b5147}.adminGoogleFormBox:focus-within{border-color:#126b5d;box-shadow:0 0 0 2px rgba(18,107,93,.12)}
+@media(max-width:720px){.googleFormFrameWrap{height:62vh;min-height:390px}.promotionImageAdmin{grid-template-columns:1fr}.promotionImageAdmin button{width:100%}.googleFormCompleteCheck{padding:13px}.stepper{grid-template-columns:1fr}}
+/* v42: 공지 링크 자동입력 및 최대 10개 홍보·붙임 이미지 */
+.inlineFieldAction{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:end}
+.inlineFieldAction .smallButton{min-height:44px;white-space:nowrap}
+.promotionUploadField{display:grid;grid-template-columns:auto auto minmax(180px,1fr);gap:10px;align-items:center;border:1px solid #cddfea;border-radius:8px;background:#f7fbfd;padding:12px}
+.promotionUploadField small{color:#536573;line-height:1.4}
+.visuallyHidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.addFileButton{justify-self:start}
+.promotionImageList{display:flex;flex-wrap:wrap;gap:7px;min-height:42px;align-items:center}
+.promotionImageItem{display:inline-flex;align-items:center;gap:6px;max-width:100%;border:1px solid #b9d0dc;border-radius:999px;background:#fff;padding:5px 8px 5px 11px}
+.promotionImageItem>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.promotionImageRemove{display:inline-grid;place-items:center;width:26px;height:26px;min-height:0;padding:0;border-radius:50%;font-size:20px;line-height:1}
+@media(max-width:720px){.inlineFieldAction,.promotionUploadField{grid-template-columns:1fr}.inlineFieldAction .smallButton,.promotionUploadField .smallButton{width:100%}.promotionImageList{display:grid}}
+
+/* v43: BETA, Google Form 제출검증, 프로그램 목록 표시 */
+.brandTitleLine{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.betaBadge{display:inline-flex;align-items:center;border-radius:999px;background:#f08a24;color:#fff;font-size:12px;font-weight:900;letter-spacing:.08em;padding:5px 9px}.betaNotice{display:flex;align-items:flex-start;gap:12px;margin:16px 32px 12px;padding:12px 16px;border:1px solid #e6bd76;border-radius:10px;background:#fff8e8;color:#67430e}.betaNotice strong{flex:0 0 auto}.betaNotice p{margin:0;line-height:1.55}.description{white-space:normal}.descriptionBullet{display:inline-block;padding-left:1.05em;text-indent:-1.05em}.googleFormVerification{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:12px;margin:14px 0;padding:14px;border:2px solid #126b5d;border-radius:8px;background:#eaf7f3}.googleFormVerification p{margin:0}.googleFormVerification.isVerified{border-color:#247a45;background:#eaf7ed}.googleFormVerification.isError{border-color:#b42318;background:#fff0f0}.googleFormVerificationConfig{display:grid;grid-template-columns:1fr 1fr;gap:12px}.googleFormVerificationConfig input{width:100%}
+@media(max-width:720px){.betaNotice{display:grid;margin:12px 14px}.googleFormVerification,.googleFormVerificationConfig{grid-template-columns:1fr}.googleFormVerification button{width:100%}}
+
+/* v45 Google Form 간편 연결 */
+.googleFormSimpleConfig{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.googleFormSimpleConfig button{align-self:end}.googleFormSimpleConfig .fileHint{grid-column:1/-1;margin:0}.googleFormAdvanced{margin-top:12px;border:1px solid #cbddeb;border-radius:10px;padding:10px 12px;background:#fff}.googleFormAdvanced summary{cursor:pointer;font-weight:700;color:#194f7c}.googleFormAdvanced[open] summary{margin-bottom:12px}@media(max-width:720px){.googleFormSimpleConfig{grid-template-columns:1fr}.googleFormSimpleConfig .fileHint{grid-column:auto}}
+
+
+/* v47 Google Form 필수 작성 안내 */
+.googleFormRequiredGuide{margin:12px 0;padding:14px 16px;border:2px solid #1877b5;border-radius:12px;background:#eef8ff;color:#173b55}.googleFormRequiredGuide strong{display:block;margin-bottom:8px;font-size:1.05rem}.googleFormRequiredGuide ol{margin:0 0 8px;padding-left:24px}.googleFormRequiredGuide li{margin:4px 0}.googleFormRequiredGuide p{margin:0;font-size:.92rem}
+
+
+/* v48 Drive 동기화 상태 */
+.applicationDriveStatus{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 16px;padding:10px 12px;border-radius:10px}.applicationDriveStatus.synced{background:#eaf8f0;color:#17643b}.applicationDriveStatus.failed,.applicationDriveStatus.pending,.applicationDriveStatus.processing{background:#fff3e8;color:#8a4100}.applicationDriveStatus span{flex:1 1 260px}.applicationDriveStatus a{font-weight:700;color:inherit}
+
+
+/* v58 Google 만족도 설문 원클릭 생성 */
+.googleFormAutoCreate{display:grid;gap:10px;border:2px solid #16806f;border-radius:10px;background:#eaf7f3;padding:14px}.googleFormAutoCreate>strong{color:#0b5147}.googleFormAutoCreate .primary{justify-self:start}.googleFormCreatedLinks{display:flex;flex-wrap:wrap;gap:8px}.googleFormCreatedLinks a{display:inline-flex;padding:8px 11px;border:1px solid #8bbeb5;border-radius:7px;background:#fff;color:#075f52;font-weight:700;text-decoration:none}.googleFormManual{border:1px solid #cbddeb;border-radius:10px;padding:11px 13px;background:#fff}.googleFormManual>summary{cursor:pointer;font-weight:700;color:#194f7c}.googleFormManual[open]>summary{margin-bottom:12px}
+/* v63 프로그램 분류·강조·마감알림 */
+.activityCategoryTabs{margin:18px 0 8px;padding:14px 16px;border:1px solid #c9dced;border-radius:16px;background:#f7fbff;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.activityCategoryTabs>strong{color:#163e6c}.activityCategoryTabs>div{display:flex;gap:8px;flex-wrap:wrap}.activityCategoryTabs button{border:1px solid #9ebbd6;border-radius:999px;background:#fff;color:#234d75;padding:8px 14px;font-weight:700}.activityCategoryTabs button.active{background:#145fa3;color:#fff;border-color:#145fa3}.categoryTag{display:inline-flex;align-items:center;border-radius:999px;background:#e8f5ed;color:#17633a;padding:5px 9px;font-size:.84rem;font-weight:800}.programContentBox{margin:12px 0 14px;padding:15px 16px;border:2px solid #87b7dd;border-radius:14px;background:#f2f9ff}.programContentBox>span{display:block;margin-bottom:7px;color:#0c5593;font-size:.82rem;font-weight:900}.programContentBox>div{color:#172b3e;font-size:1rem;line-height:1.65;font-weight:650}.taxonomyFieldset{margin:0;padding:14px 16px;border:1px solid #c8d8e7;border-radius:12px}.taxonomyFieldset legend{padding:0 6px;font-weight:800;color:#163e6c}.taxonomyChecks{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:9px 12px}.taxonomyChecks label{display:flex;align-items:center;gap:7px;padding:8px;border-radius:8px;background:#f7fafc}.taxonomyChecks input{width:18px;height:18px}.deadlineNotificationBox{margin:0 0 16px;padding:16px 18px;border:2px solid #e49c2f;border-radius:14px;background:#fff8e8;display:flex;align-items:center;justify-content:space-between;gap:18px}.deadlineNotificationBox strong{color:#9a4c00;font-size:1.05rem}.deadlineNotificationBox p{margin:6px 0 0;line-height:1.55}.deadlineNotificationBox button{white-space:nowrap}.superGrid #searchConfigForm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.superGrid #searchConfigForm h3,.superGrid #searchConfigForm .sectionHelp,.superGrid #searchConfigForm .formActions{grid-column:1/-1}@media(max-width:720px){.activityCategoryTabs{align-items:flex-start;flex-direction:column}.taxonomyChecks,.superGrid #searchConfigForm{grid-template-columns:1fr}.deadlineNotificationBox{align-items:flex-start;flex-direction:column}}
+/* v64 상세검색 반응형 배치와 최고관리자 공간 정리 */
+.searchHeadingActions{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap}.searchHeadingActions button{white-space:nowrap}
+@media(min-width:1200px){.searchPanel .filters{display:grid!important;grid-template-columns:minmax(200px,1.8fr) repeat(6,minmax(105px,1fr));gap:10px;align-items:end}.searchPanel .keywordFilter{grid-column:auto}#toggleSearchFilters{display:none}}
+@media(max-width:1199px){.searchPanel .filters{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.searchPanel .keywordFilter{grid-column:auto}.searchPanel.filtersCollapsed .filters{display:none}.searchPanel.filtersCollapsed .searchHeading{margin-bottom:0}}
+@media(max-width:760px){.searchPanel .filters{grid-template-columns:repeat(2,minmax(0,1fr))}.searchHeading{align-items:center}.searchHeadingActions{width:100%}.searchHeadingActions button{flex:1}}
+@media(max-width:460px){.searchPanel .filters{grid-template-columns:1fr}.searchHeadingActions{display:grid;grid-template-columns:1fr 1fr}.searchHeadingActions button{width:100%}}
+@media(min-width:901px){.superGrid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.superGrid>div{display:contents}#searchConfigForm{grid-column:1/-1!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px}#searchConfigForm h3,#searchConfigForm .sectionHelp,#searchConfigForm .formActions{grid-column:1/-1}#searchConfigForm textarea{min-height:132px;max-height:190px}#superPasswordForm{grid-column:1!important}#managerForm{grid-column:2!important}#managerList{grid-column:1/-1!important}}
+@media(max-width:900px){#searchConfigForm{grid-template-columns:repeat(2,minmax(0,1fr))!important}#searchConfigForm h3,#searchConfigForm .sectionHelp,#searchConfigForm .formActions{grid-column:1/-1}}
+@media(max-width:600px){#searchConfigForm{grid-template-columns:1fr!important}}
+/* v65 Google Form 연결 도움말 */
+.googleFormConnectionActions{display:flex;gap:8px;align-items:end}.googleFormConnectionActions button{flex:1}.googleFormHelpDialog{width:min(760px,calc(100vw - 24px));padding:0;overflow:hidden}.googleFormHelpDialog form{padding:22px;max-height:calc(100vh - 32px);overflow:auto}.googleFormHelpHead{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:14px}.googleFormHelpHead h2{margin:3px 0 5px}.googleFormHelpHead p{margin:0;color:#475467;line-height:1.5}.stepEyebrow{color:#126b5d;font-size:.82rem;font-weight:900}.modalClose{border:0;background:#eef3f7;font-size:1.4rem;line-height:1;padding:8px 11px}.googleFormHelpSteps{display:grid;gap:9px;margin:0;padding:0;list-style:none;counter-reset:nurim-help}.googleFormHelpSteps li{counter-increment:nurim-help;position:relative;display:grid;gap:3px;padding:12px 14px 12px 52px;border:1px solid #cbddeb;border-radius:10px;background:#f8fbfd}.googleFormHelpSteps li::before{content:counter(nurim-help);position:absolute;left:14px;top:13px;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#126b5d;color:#fff;font-weight:900}.googleFormHelpSteps strong{color:#173b55}.googleFormHelpSteps span{color:#475467;font-size:.92rem;line-height:1.5}.googleFormHelpNotice,.relayNextSteps{display:grid;gap:5px;margin:14px 0;padding:12px 14px;border-radius:10px;background:#eef8f5;color:#174d45}.googleFormHelpNotice p{margin:0;line-height:1.5}.relayNextSteps span{line-height:1.55}.relayNextSteps em{color:#8a4b08;font-style:normal;font-weight:800}.buttonLink{display:inline-flex;align-items:center;justify-content:center;border:1px solid #126b5d;border-radius:8px;padding:10px 13px;color:#0b5147;background:#fff;text-decoration:none;font-weight:800}.dialogActions{display:flex;justify-content:flex-end;gap:9px;align-items:center}@media(max-width:720px){.googleFormConnectionActions,.dialogActions{display:grid;grid-template-columns:1fr}.googleFormConnectionActions button,.dialogActions>*{width:100%}.googleFormHelpDialog form{padding:16px}.googleFormHelpSteps li{padding-left:48px}}
+.copyStatus{margin:8px 0 12px;padding:9px 11px;border-radius:8px;background:#eef8f5;color:#174d45;font-weight:800;line-height:1.45}
+
+/* v65: 프로그램 내용은 4줄 높이로 고정하고 내부 스크롤 */
+.programContentBox>div{height:6.6em;max-height:6.6em;overflow-y:auto;overflow-x:hidden;padding-right:6px;scrollbar-gutter:stable;overscroll-behavior:contain}
+/* v65: 고대비 내부 패널과 모바일 신청 단계 보완 */
+html.a11yHighContrast :where(.programContentBox,.dialogTitle,.stepper,.consentItem,.consentIntro,.applicationFileBox,.googleFormIntro,.googleFormVerification,.applicationLookupResult,.fileInfo,.googleFormHelpSteps li,.googleFormHelpNotice,.relayNextSteps){background:#000!important;color:#fff!important;border-color:#ffdf00!important}
+html.a11yHighContrast .programContentBox>span,html.a11yHighContrast .programContentBox>div{color:#fff!important}
+html.a11yHighContrast :where(.badge,.categoryTag,.ageTag,.selectionBadge){background:#000!important;color:#ffdf00!important;border:1px solid #ffdf00!important}
+html.a11yHighContrast :where(button,.primary):disabled{background:#444!important;color:#fff!important;border-color:#fff!important;opacity:1}
+.programContentBox>div:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:720px){#applyStepper{grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:5px}#applyStepper li{padding:8px 5px;font-size:12px;line-height:1.3}.programLabels{align-items:flex-start}.programTagGroup{max-width:68%}}
+/* v65: 연·월·일 스크롤 날짜 선택 */
+.scrollDateInput{display:grid;grid-template-columns:minmax(92px,1.25fr) repeat(2,minmax(72px,.8fr)) auto;gap:7px;align-items:center}.scrollDateInput select,.scrollDateInput button{min-width:0}.scrollDateNative{display:none}.scrollDateInput.isDirect{grid-template-columns:minmax(0,1fr) auto}.scrollDateInput.isDirect select{display:none}.scrollDateNative.scrollDateNativeVisible{display:block}.scrollDateDirect{white-space:nowrap}@media(max-width:520px){.scrollDateInput{grid-template-columns:1.2fr .8fr .8fr}.scrollDateDirect{grid-column:1/-1;width:100%}.scrollDateInput.isDirect{grid-template-columns:1fr}.scrollDateInput.isDirect .scrollDateDirect{grid-column:auto}}
+
+/* v65: 저시력 사용자가 체감할 수 있는 확대와 자동 재배치 */
+html.a11yLargeText body{zoom:1.28}
+html.a11yLargeText :where(input,select,textarea,button){font-size:18px!important;min-height:50px}
+html.a11yLargeText :where(p,li,dt,dd,label,summary,.programContentBox>div,.sectionHelp,.fileHint){font-size:1.08rem!important;line-height:1.7!important}
+html.a11yLargeText :where(.filters,.formGrid,.applicationLookupForm,.adminProgramFilterRow){grid-template-columns:minmax(0,1fr)!important}
+html.a11yLargeText :where(.cardTop,.programLabels,.rowHead,.formActions){flex-wrap:wrap}
+@media(max-width:760px){html.a11yLargeText body{zoom:1;font-size:22px}html.a11yLargeText :where(input,select,textarea,button){font-size:21px!important;min-height:56px}html.a11yLargeText h1{font-size:38px!important}html.a11yLargeText h2{font-size:30px!important}html.a11yLargeText h3{font-size:25px!important}.scrollDateInput{grid-template-columns:1fr 1fr 1fr}.scrollDateInput .scrollDateDirect{grid-column:1/-1}}
+
+/* v65: 검정·흰색·노랑을 사용하는 전체 색반전 */
+html.a11yHighContrast :where(body,main,header,nav,section,article,aside,div,form,fieldset,details,dialog){background-color:#000!important;background-image:none!important;color:#fff!important;border-color:#ffdf00!important}
+html.a11yHighContrast :where(p,li,dt,dd,label,strong,span,small,summary,h1,h2,h3,h4){color:#fff!important}
+html.a11yHighContrast :where(a,button,.primary){background:#ffdf00!important;color:#000!important;border-color:#ffdf00!important;text-decoration:underline}
+html.a11yHighContrast :where(input,select,textarea){background:#000!important;color:#fff!important;border:2px solid #ffdf00!important}
+html.a11yHighContrast :where(.badge,.categoryTag,.ageTag,.selectionBadge){background:#000!important;color:#ffdf00!important;border-color:#ffdf00!important}
+html.a11yHighContrast :where(button,a) span{color:#000!important}html.a11yHighContrast button:disabled span{color:#fff!important}
+/* v65 모바일 관리자 조작 안정화 */
+@media(max-width:720px){
+  #adminDialog{padding:0 12px 18px;overscroll-behavior:contain}
+  #adminDialog>.dialogTitle{position:sticky;top:0;z-index:12;margin:0 -12px;padding:12px;background:#fff;border-bottom:1px solid #d6e2ea}
+  #adminDialog>.tabs{position:sticky;top:65px;z-index:11;display:flex;flex-wrap:nowrap;margin:0 -12px 12px;padding:8px 12px;background:#fff;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;border-bottom:1px solid #d6e2ea}
+  #adminDialog>.tabs button{flex:0 0 auto;min-height:46px;scroll-snap-align:start}
+  #adminDialog .formActions,#adminDialog .formActions.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  #adminDialog .formActions:not(.split)>:only-child{grid-column:1/-1}
+  #adminDialog .formActions button,#adminDialog .googleFormConnectionActions button,#adminDialog .googleFormCreatedLinks a{min-height:48px;white-space:normal}
+  #adminDialog input,#adminDialog select,#adminDialog textarea,#adminDialog button{max-width:100%}
+  #adminDialog .adminSectionIntro,#adminDialog .sectionHead{align-items:stretch}
+  #adminDialog .sectionHead{display:grid;gap:10px}
+  #adminDialog .taxonomyChecks{grid-template-columns:1fr 1fr}
+  #adminDialog .googleFormConnectionActions{display:grid;grid-template-columns:1fr;gap:8px}
+  #adminDialog .superGrid{grid-template-columns:1fr}
+}
+@media(max-width:420px){
+  #adminDialog .formActions,#adminDialog .formActions.split,#adminDialog .taxonomyChecks{grid-template-columns:1fr}
+}
+/* 사이트 정책·운영 안내 */
+.siteFooter{margin-top:28px;padding:28px clamp(18px,4vw,52px);border-top:1px solid #c9dbe6;background:#173b5d;color:#fff}.siteFooter nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:15px}.siteFooter a{color:#fff;text-underline-offset:4px;font-weight:800}.siteFooter .privacyLink{color:#ffdf00}.siteFooter p{margin:5px 0;color:#e5eff6;font-size:14px}.consentPolicyLink{margin-top:10px!important}.consentPolicyLink a{color:#075f8f;font-weight:900}.minorConsentNotice{padding:10px 12px;border-left:4px solid #d88900;background:#fff8e7;color:#724700!important;font-weight:700}.policyPage{margin:0;background:#f2f7fa;color:#172b3e}.policyHeader{padding:22px clamp(18px,5vw,64px);background:#173b5d;color:#fff}.policyHeader a{color:#fff;font-weight:800}.policyHeader h1{margin:12px 0 5px;font-size:clamp(28px,5vw,42px)}.policyHeader p{margin:0;color:#dcebf4}.policyMain{width:min(920px,calc(100% - 28px));margin:24px auto 48px;padding:clamp(18px,4vw,36px);border:1px solid #cbdde8;border-radius:16px;background:#fff;box-shadow:0 10px 30px rgba(15,57,88,.08)}.policyMain h2{margin:32px 0 10px;color:#155d93;font-size:22px}.policyMain h2:first-of-type{margin-top:10px}.policyMain h3{margin:22px 0 8px}.policyMain p,.policyMain li,.policyMain dd{line-height:1.75}.policyMain table{width:100%;border-collapse:collapse;margin:12px 0;display:block;overflow-x:auto}.policyMain th,.policyMain td{min-width:135px;padding:10px;border:1px solid #cbdde8;text-align:left;vertical-align:top}.policyMain th{background:#edf5fa}.policyDraftNotice{padding:14px;border:2px solid #d88900;border-radius:10px;background:#fff8e7;color:#663f00}.policyPlaceholder{font-weight:900;color:#a32f4d}.policyMeta{padding:12px 14px;border-radius:10px;background:#edf5fa}.policyBack{display:inline-flex;margin-top:24px;padding:10px 14px;border-radius:8px;background:#145fa3;color:#fff!important;font-weight:800;text-decoration:none}@media(max-width:600px){.siteFooter{text-align:center}.siteFooter nav{justify-content:center;display:grid}.policyMain{width:calc(100% - 20px);margin-top:10px;padding:17px}.policyMain h2{font-size:20px}}
+html.a11yHighContrast .siteFooter,html.a11yHighContrast .policyPage,html.a11yHighContrast .policyHeader,html.a11yHighContrast .policyMain{background:#000!important;color:#fff!important}html.a11yHighContrast .policyMain :where(h1,h2,h3,p,li,dt,dd,th,td){color:#fff!important}
+/* 최고관리자 사이트 안내정보 간편 편집 */
+.policySettingsForm{border:2px solid #2d789f;background:#f5fbff}.policySettingsForm .sectionHead h3{margin:0 0 6px}.policySettingsForm .sectionHead p{margin:0}.policySettingsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.policySettingsGrid .wide{grid-column:1/-1}.policyAdvanced{margin:16px 0;border:1px solid #c9dce8;border-radius:10px;background:#fff;padding:12px}.policyAdvanced summary{cursor:pointer;color:#155d93;font-weight:900}.policyAdvanced[open] summary{margin-bottom:8px}.policyPublishToggle{display:flex;grid-template-columns:none;align-items:center;gap:9px;margin:14px 0;padding:12px;border-radius:9px;background:#fff8e7;color:#694200}.policyPublishToggle input{width:20px;height:20px}.policySaveStatus{min-height:24px;margin:10px 0 0;color:#155d93;font-weight:800}@media(max-width:700px){.policySettingsGrid{grid-template-columns:1fr}.policySettingsGrid .wide{grid-column:auto}.policyPublishToggle{align-items:flex-start}}
+/* 최고관리자 정책 편집기: 설정 맨 아래, 두 단계 펼침 */
+#superManage:not(.hidden){display:flex;flex-direction:column}.policySettingsForm{order:9999;margin-top:18px;padding:0;overflow:hidden}.policyEditorShell>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;padding:17px 18px;background:#eaf5fb;color:#154e75}.policyEditorShell>summary strong{font-size:20px}.policyEditorShell>summary span{color:#567387;font-size:14px}.policyEditorShell[open]>summary{border-bottom:1px solid #c5dce8}.policyEditorBody{padding:18px}.policyOriginalEditor{margin:18px 0;border:2px solid #9fc5dc;border-radius:12px;background:#fff}.policyOriginalEditor>summary{cursor:pointer;padding:14px 16px;color:#155d93;font-size:17px;font-weight:900}.policyOriginalEditor[open]>summary{border-bottom:1px solid #c9dce8;background:#f3f9fc}.policyOriginalEditorBody{padding:16px}.policyOriginalHelp{padding:11px 13px;border-radius:8px;background:#eef5f8;color:#405d70;line-height:1.6}.policyOriginalHelp code{font-weight:900}.policyPageEditor{margin-top:17px;padding:14px;border:1px solid #cfdee7;border-radius:10px;background:#f9fcfd}.policyPageEditor>div{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}.policyPageEditor h4{margin:0;color:#173b5d;font-size:17px}.policyPageEditor textarea{min-height:290px;line-height:1.6;font-family:"Malgun Gothic","Segoe UI",sans-serif}.policyCustomContent{display:grid;gap:4px}.policyCustomContent h2{margin-bottom:5px}.policyCustomContent p{white-space:pre-wrap;margin:5px 0}@media(max-width:700px){.policyEditorShell>summary,.policyPageEditor>div{align-items:stretch;display:grid}.policyEditorShell>summary span{line-height:1.4}.policyEditorBody,.policyOriginalEditorBody{padding:12px}.policyPageEditor textarea{min-height:230px}.policyPageEditor button{width:100%}}
+/* v108: shared header control dimensions */
+.headerUtilities{align-items:center;gap:8px}
+.headerUtilities #a11yTextSize,.headerUtilities #a11yContrast,.headerUtilities #adminOpen{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-width:76px;min-height:44px;height:44px;margin:0;padding:8px 12px;font-size:16px;font-weight:600;line-height:1.5;border-radius:12px}
+
+.headerUtilities #a11yTextSize,.headerUtilities #a11yContrast,.headerUtilities #adminOpen{width:84px;min-width:84px;white-space:nowrap}
+.headerUtilities #a11yTextSize[aria-pressed="true"],.headerUtilities #a11yContrast[aria-pressed="true"]{width:auto;min-width:120px}
+.adminHeaderActions,.adminAccessibilityToolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.adminHeaderActions button{box-sizing:border-box;min-height:44px;padding:8px 12px;font-size:16px;line-height:1.5;border-radius:12px}
+#adminDialog>.dialogTitle{flex-wrap:wrap;gap:8px}
+@media(max-width:480px){.adminHeaderActions{width:100%;justify-content:flex-end}.adminHeaderActions button{font-size:14px;padding:8px 10px}}

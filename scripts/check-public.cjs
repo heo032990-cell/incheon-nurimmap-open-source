@@ -1,0 +1,6 @@
+const fs=require('fs'),path=require('path');
+const root=path.resolve(__dirname,'..'),bad=[];
+const ignore=new Set(['node_modules','dist','.git','.netlify','.supabase','supabase','artifacts','config.local.js']);
+const patterns=[/eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{15,}/,/sb_(?:secret|publishable)_[A-Za-z0-9_-]{15,}/,/gh[pousr]_[A-Za-z0-9]{25,}/,/github_pat_[A-Za-z0-9_]{20,}/,/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,/https:\/\/[a-z]{20}\.supabase\.co/,/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]{30,}/,/drive\.google\.com\/drive\/folders\/[A-Za-z0-9_-]{25,}/];
+function visit(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(ignore.has(e.name)||e.name.startsWith('.env')&&e.name!=='.env.example')continue;const f=path.join(dir,e.name);if(e.isDirectory())visit(f);else if(/\.(?:html|css|[cm]?js|ts|gs|sql|md|json|toml|ya?ml|example)$/.test(e.name)||e.name==='LICENSE'){const s=fs.readFileSync(f,'utf8');if(patterns.some(p=>p.test(s)))bad.push(path.relative(root,f));}}}
+visit(root);if(bad.length){console.error('Potential real credentials/configuration in: '+bad.join(', '));process.exit(1);}console.log('Public source pattern scan passed. Review remains necessary.');

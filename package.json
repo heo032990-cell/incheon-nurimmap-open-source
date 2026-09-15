@@ -1,0 +1,22 @@
+{
+  "name": "incheon-nurimmap-open-source",
+  "version": "109.0.0",
+  "description": "Accessible welfare program discovery and application platform",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "build": "node scripts/build.cjs",
+    "test": "node --test tests/*.test.mjs",
+    "check:public": "node scripts/check-public.cjs",
+    "prepare:functions": "node scripts/prepare-functions.cjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.112.4"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.3.14"
+  }
+}

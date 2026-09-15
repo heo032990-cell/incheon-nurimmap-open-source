@@ -1,0 +1,2 @@
+export function googleBasicApplication(a){return Object.fromEntries(['id','program_id','applicant_name','phone','birth_date','created_at','application_status','queue_number','lifecycle_status','modified_at','cancelled_at','deleted_at','last_action_actor','last_action_at','drive_uploaded_file_url'].map(k=>[k,a[k]]));}
+export function googleProgram(p){return Object.fromEntries(['id','title','selection_method','capacity'].map(k=>[k,p[k]]));}

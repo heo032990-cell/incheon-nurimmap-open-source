@@ -1,0 +1,11 @@
+/* Align related editors without constraining enlarged text or mobile flow. */
+#searchConfigForm .activitySettingBody{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.activityNamesPanel,.activitySettingBody>.activityIconSettings{min-width:0;margin:0;padding:14px;border:1px solid #cbd5ca;border-radius:12px;display:flex;flex-direction:column;gap:12px}
+.activitySettingBody legend{padding:0 5px;line-height:1.6}
+.activityNamesPanel>label{display:flex;flex-direction:column;flex:1;min-height:0;margin:0}
+#searchConfigForm .activityNamesPanel textarea{flex:1;width:100%;height:auto;min-height:180px!important;max-height:none!important;resize:vertical;margin:0}
+.activitySettingBody>.activityIconSettings>p{margin:0;line-height:1.6}
+.activitySettingBody #iconSelectionPreview{margin-top:auto}
+.activitySettingBody #activityIconEditors{align-items:start}
+@media(max-width:700px){#searchConfigForm .activitySettingBody{grid-template-columns:1fr}#searchConfigForm .activityNamesPanel textarea{height:150px;min-height:150px!important;flex:auto}}
+html.a11yHighContrast .activityNamesPanel{border-color:#fff!important}

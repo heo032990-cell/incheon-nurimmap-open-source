@@ -1,0 +1,17 @@
+const fs=require('fs'),path=require('path'),cp=require('child_process'),vm=require('vm');
+const root=path.resolve(__dirname,'..'),out=path.join(root,'dist');
+if(!out.startsWith(root+path.sep)||path.basename(out)!=='dist')throw Error('Invalid build directory');
+for(const f of fs.readdirSync(root).filter(f=>/\.(js|mjs)$/.test(f)))cp.execFileSync(process.execPath,['--check',path.join(root,f)]);
+new vm.Script(fs.readFileSync(path.join(root,'backend/google-apps-script.gs'),'utf8'));
+fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out);
+for(const f of fs.readdirSync(root))if(/\.(html|css|js|mjs|ico|png)$/.test(f)&&f!=='config.example.js')fs.copyFileSync(path.join(root,f),path.join(out,f));
+for(const d of ['assets','manual'])if(fs.existsSync(path.join(root,d)))fs.cpSync(path.join(root,d),path.join(out,d),{recursive:true});
+for(const f of ['_headers','_redirects'])fs.copyFileSync(path.join(root,f),path.join(out,f));
+const vendor=path.join(root,'node_modules/@supabase/supabase-js/dist/umd/supabase.js');
+if(!fs.existsSync(vendor))throw Error('Run npm ci first.');
+fs.copyFileSync(vendor,path.join(out,'assets/supabase-js-2.min.js'));
+if(!fs.existsSync(path.join(out,'config.local.js')))fs.writeFileSync(path.join(out,'config.local.js'),'window.NURIM_CONFIG = {};\n');
+const depLicense=path.join(root,'node_modules/@supabase/supabase-js/LICENSE');if(fs.existsSync(depLicense))fs.copyFileSync(depLicense,path.join(out,'assets/supabase-LICENSE.txt'));
+fs.copyFileSync(path.join(root,'index.html'),path.join(out,'admin.html'));
+if(!fs.existsSync(path.join(root,'config.local.js')))fs.copyFileSync(path.join(root,'demo.html'),path.join(out,'index.html'));
+console.log('Built public edition in dist; backend and server secrets excluded.');

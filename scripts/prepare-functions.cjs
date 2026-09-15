@@ -1,0 +1,3 @@
+const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..');
+for(const [name,entry] of [['swift-processor','swift-processor.ts'],['nurim-survey','nurim-survey.ts']]){const d=path.join(root,'supabase/functions',name);fs.mkdirSync(d,{recursive:true});fs.copyFileSync(path.join(root,'backend',entry),path.join(d,'index.ts'));fs.copyFileSync(path.join(root,'backend/storage-policy.mjs'),path.join(d,'storage-policy.mjs'));if(name==='nurim-survey')fs.copyFileSync(path.join(root,'guardian-core.mjs'),path.join(d,'guardian-core.mjs'));if(name==='nurim-survey')fs.copyFileSync(path.join(root,'survey-core.mjs'),path.join(d,'survey-core.mjs'));}
+console.log('Prepared function directories from source.');

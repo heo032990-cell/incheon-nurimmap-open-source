@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {validateSchema,surveyPages,validateAnswers,csv} from '../survey-core.mjs';
+const q=(id,type='text',pageBreakBefore=false)=>({id,type,label:id,help:'',required:type!=='notice',options:[],pageBreakBefore});
+const schema=validateSchema({title:'페이지 검사',description:'',questions:[q('first'),q('heading','notice',true),q('second')]});
+assert.equal(schema.questions[1].pageBreakBefore,true);assert.deepEqual(surveyPages(schema).map(p=>p.map(q=>q.id)),[['first'],['heading','second']]);
+assert.equal(surveyPages({questions:[]}).length,1);assert.equal(surveyPages({questions:[q('old')]}).length,1);
+const basic={name:'검사',birth:'2000-01-01',phone:'01012345678'};
+assert.throws(()=>validateAnswers(schema,basic,{first:'a'}),/second/);
+assert.deepEqual(validateAnswers(schema,basic,{first:'a',second:'b'}),{first:'a',second:'b'});
+assert(!csv(schema,[]).includes('heading'));
+console.log('Page configuration preservation, legacy schema and cross-page validation passed');

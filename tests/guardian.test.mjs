@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {isUnder14,validateGuardian,koreaToday} from '../guardian-core.mjs';
+const day='2026-09-16';
+assert.equal(isUnder14('2012-09-17',day),true);
+assert.equal(isUnder14('2012-09-16',day),false);
+assert.equal(isUnder14('2012-09-15',day),false);
+assert.equal(isUnder14('2012-02-29','2026-02-28'),true);
+assert.equal(isUnder14('2012-02-29','2026-03-01'),false);
+assert.throws(()=>isUnder14('2020-02-30',day));
+assert.throws(()=>isUnder14('2027-01-01',day));
+assert.equal(koreaToday(new Date('2026-09-15T15:01:00Z')),day);
+assert.throws(()=>validateGuardian('2020-01-01',null,day));
+assert.throws(()=>validateGuardian('2020-01-01',{name:'보호자',signature:'아동',agreed:true},day));
+assert.throws(()=>validateGuardian('2020-01-01',{name:'보호자',signature:'보호자',agreed:false},day));
+assert.equal(validateGuardian('2020-01-01',{name:' 보호자 ',signature:'보호자',agreed:true},day).name,'보호자');
+assert.equal(validateGuardian('2000-01-01',{name:'불필요',signature:'불필요',agreed:true},day),null);
+console.log('PASS: Korean date, 14th birthday boundary, leap day, missing/mismatched consent, adult minimization');

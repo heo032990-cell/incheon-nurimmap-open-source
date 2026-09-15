@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <base href="/">
+  <link rel="stylesheet" href="/survey.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인천 누림지도</title>
+  <meta name="description" content="인천 지역 장애인복지관의 프로그램을 검색하고 온라인으로 신청할 수 있는 인천 누림지도 베타 서비스입니다.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://example.org/">
+  <meta property="og:title" content="인천 누림지도">
+  <meta property="og:description" content="인천 지역 장애인복지 프로그램을 한눈에 확인하고 신청할 수 있습니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.org/">
+  <link rel="stylesheet" href="./styles.css?v=109">
+  <link rel="stylesheet" href="./ui-illustrated-header.css?v=109">
+  <link rel="stylesheet" href="./ui-public-layout.css?v=109">
+  <link rel="stylesheet" href="./ui-admin-layout.css?v=109">
+  <link rel="stylesheet" href="./manager-directory.css?v=109">
+<link rel="stylesheet" href="/ui-responsive-layout.css?v=109">
+
+  <meta name="application-name" content="인천 누림지도">
+  <meta name="theme-color" content="#fcfaf4">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/nurim-touch-icon.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+  <meta property="og:site_name" content="인천 누림지도">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://example.org/assets/nurim-icon.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="크림·노랑 배경에 등대와 바다를 담은 누림지도 아이콘">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://example.org/assets/nurim-icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://example.org/#website","url":"https://example.org/","name":"인천 누림지도","alternateName":["인천누림지도","누림지도"],"inLanguage":"ko-KR"}</script>
+<script src="/admin-page.js?v=109" defer></script><script type="module" src="/guardian-consent.mjs?v=109"></script></head>
+<body>
+  <nav class="skipLinks" aria-label="페이지 바로가기"><a href="#mainContent">본문 바로가기</a><a href="#programSearch">프로그램 검색 바로가기</a><a href="#programResultsTitle">검색 결과 바로가기</a><a href="#applicationLookup">신청내역 찾기 바로가기</a></nav>
+  <div id="a11yLive" class="srOnly" role="status" aria-live="polite" aria-atomic="true"></div>
+  <header class="topbar">
+    <img class="heroScenery" src="./assets/incheon-panorama.png" alt="" aria-hidden="true" fetchpriority="high">
+    <div class="heroContent">
+    <div class="brandBlock">
+      <div class="brandLogo"><img src="/assets/nurim-icon.png" alt="누림지도 등대 아이콘" width="512" height="512" style="height:auto"></div>
+      <div><p>인천 곳곳의 장애인복지 프로그램을 한눈에</p><div class="brandTitleLine"><h1>인천 누림지도</h1><span class="betaBadge">BETA</span></div><p class="brandTagline">인천의 더 나은 복지, 누림지도가 함께합니다.</p></div>
+    </div>
+    <div class="headerUtilities">
+      <aside class="accessibilityToolbar" aria-label="화면 이용 편의 설정"><strong class="srOnly">화면 이용 편의</strong><button id="a11yTextSize" type="button" aria-pressed="false">큰 글씨</button><button id="a11yContrast" type="button" aria-pressed="false">색반전</button></aside>
+      <button id="adminOpen" type="button">관리자</button>
+    </div>
+    </div>
+  </header>
+  <main id="mainContent" tabindex="-1">
+    <aside class="betaNotice" aria-label="베타 서비스 안내"><strong>베타 서비스 안내</strong><p>인천 누림지도는 현재 베타 운영 중입니다. 등록된 정보는 테스트용으로 실제 모집·신청 정보와 다를 수 있으니, 참여 전 해당 복지관의 공식 안내를 확인해 주세요.</p></aside>
+    <section id="programSearch" class="searchPanel" aria-labelledby="searchTitle">
+      <div class="searchHeading"><div><p>내게 맞는 프로그램 찾기</p><h2 id="searchTitle">상세검색</h2></div><div class="searchHeadingActions"><button id="toggleSearchFilters" type="button" aria-expanded="true" aria-controls="programFilters">검색조건 접기</button><button id="resetFilters" type="button">검색조건 초기화</button></div></div>
+      <div id="programFilters" class="filters">
+        <label class="keywordFilter">프로그램 검색 <input id="search" name="program-search" type="search" autocomplete="off" autocapitalize="off" data-1p-ignore="true" placeholder="프로그램명이나 내용 검색"></label>
+        <label>이용 연령 <select id="ageGroup"><option value="all">전체 연령</option><option value="아동">아동</option><option value="청소년">청소년</option><option value="성인">성인</option><option value="전연령">전연령·가족</option><option value="__custom__">기타·직접입력</option></select></label>
+        <label>복지관 <select id="centerFilter"><option value="all">전체 복지관</option></select></label><label>장애유형 <select id="disabilityFilter"><option value="all">전체 장애유형</option></select></label><label>참여대상 <select id="audienceTypeFilter"><option value="all">전체 참여대상</option></select></label>
+        <label>모집상태 <select id="status"><option value="all">전체</option><option value="open">모집중</option><option value="upcoming">모집예정</option><option value="closed">마감</option></select></label>
+        <label>정렬 <select id="programSort"><option value="default">기본순</option><option value="newest">최신 등록순</option><option value="closing">마감 임박순</option><option value="recentlyClosed">최근 마감순</option></select></label>
+      </div>
+    </section>
+    <section id="resultBanner" class="resultBanner" aria-label="검색 결과 안내"><img class="harborScenery" src="./assets/incheon-harbor.png" alt="" aria-hidden="true"><img class="harborScenery harborRight" src="./assets/incheon-harbor.png" alt="" aria-hidden="true"><div class="resultBannerCopy"><p id="resultSummary" class="resultSummary"></p><p class="resultGuide">다양한 검색조건을 설정해 보세요. 나에게 맞는 프로그램을 찾을 수 있습니다.</p></div></section>
+    <h2 id="programResultsTitle" class="srOnly" tabindex="-1">프로그램 검색 결과</h2>
+    <section id="programs" class="programs" aria-labelledby="programResultsTitle"></section>
+    <section id="applicationLookup" class="applicationLookup" aria-labelledby="applicationLookupTitle">
+      <div>
+        <p class="smallLabel">신청 확인</p>
+        <h2 id="applicationLookupTitle">내 신청내역 찾기</h2>
+        <p>신청할 때 입력한 이름, 생년월일, 연락처 뒷번호 4자리가 정확히 일치해야 조회됩니다.</p>
+      </div>
+      <form id="applicationLookupForm" class="applicationLookupForm">
+        <label>이름 <input id="lookupName" autocomplete="name" required></label>
+        <label>생년월일 <input id="lookupBirth" type="date" required></label>
+        <label>연락처 뒷번호 4자리 <input id="lookupPhoneLast4" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" placeholder="0000" required></label>
+        <button class="primary" type="submit">신청내역 조회</button>
+      </form>
+      <div id="applicationLookupResult" class="applicationLookupResult hidden" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <nav aria-label="사이트 정책 및 안내">
+      <a class="privacyLink" href="./privacy.html">개인정보 처리방침</a>
+      <a href="./terms.html">이용약관</a>
+      <a href="./accessibility.html">웹 접근성 안내</a>
+      <a href="./contact.html">운영기관·문의</a>
+    </nav>
+    <p><strong>인천 누림지도</strong> · 운영기관 <span data-policy="operatorName">000</span> · 대표전화 <span data-policy="phone">000</span></p>
+    <p>© 2026 인천 누림지도. All rights reserved.</p>
+  </footer>
+  <dialog id="applyDialog">
+    <form id="applyForm">
+      <div class="dialogTitle"><div><p class="smallLabel">신청서</p><h2 id="applyProgramName">프로그램 신청</h2></div><button type="button" id="applyClose">닫기</button></div>
+      <ol class="stepper" id="applyStepper" aria-label="신청 단계"><li class="active" id="stepInfoLabel">1. 신청 정보</li><li id="stepGoogleFormLabel" class="hidden">2. 추가 설문</li><li id="stepConsentLabel">2. 개인정보 동의</li></ol>
+      <input id="applyProgramId" type="hidden">
+      <section id="applyStepInfo" class="applyStep">
+        <div class="formGrid">
+          <label>이름 <input id="name" required autocomplete="name"></label><label>연락처 <input id="phone" required inputmode="tel" placeholder="010-0000-0000"></label>
+          <label>생년월일 <input id="birth" type="date" required></label><label>참여자 구분 <select id="type" required><option value="">선택</option><option>장애 당사자</option><option>보호자</option><option>지역주민</option></select></label>
+          <label class="wide">요청사항 <textarea id="note" rows="3" placeholder="이동지원, 의사소통 지원 등"></textarea></label>
+        </div>
+        <section id="applicationFileBox" class="applicationFileBox hidden"><h3>신청서 파일 제출</h3><p id="applicationFileGuide"></p><a id="templateDownload" class="downloadLink" href="#" download>신청서 양식 다운로드</a><p id="templateMissing" class="fileWarning hidden">등록된 신청서 양식이 없습니다.</p><label>신청서·증빙자료 파일 추가 <input id="applicantFile" type="file" accept=".pdf,.hwp,.hwpx,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,.heif,.zip" multiple></label><p class="fileHint" id="applicationFileHint">신청서와 증빙자료를 최대 10개까지 추가할 수 있습니다. 파일을 여러 번 나누어 선택해도 기존 목록에 추가됩니다. PDF·한글·워드·사진·ZIP 파일, 합계 10MB 이하. 파일은 각각의 원본으로 저장됩니다.</p><div id="applicationFileSelectionInfo" class="fileInfo">선택된 신청서 파일이 없습니다.</div></section>
+        <div class="formActions"><button class="primary" id="goConsent" type="button">다음: 개인정보 동의</button></div>
+      </section>
+      <section id="applyStepGoogleForm" class="applyStep hidden"><div class="googleFormIntro"><h3>Google 신청서 작성</h3><p>아래 Google Form을 제출한 뒤 ‘설문 제출 확인’을 눌러 주세요. 화면이 작으면 새 창으로 열어 작성할 수 있습니다.</p></div><div class="googleFormFrameWrap"><iframe id="googleFormFrame" title="프로그램 추가 Google Form" loading="lazy"></iframe></div><a id="googleFormOpenNew" class="downloadLink" href="#" target="_blank" rel="noopener noreferrer">Google Form 새 창으로 열기 ↗</a><div class="googleFormVerification"><button id="verifyGoogleFormSubmission" class="primary" type="button">설문 제출 확인</button><p id="googleFormVerificationStatus" role="status" aria-live="polite">Google Form 제출 후 이 버튼을 눌러 확인해 주세요.</p></div><div class="formActions split"><button id="backGoogleForm" type="button">이전: 신청 정보</button><button class="primary" id="continueAfterGoogleForm" type="button" disabled>다음 단계</button></div></section><section id="applyStepConsent" class="applyStep hidden"><div class="consentIntro"><h3>개인정보 동의 확인</h3><p>항목별 처리 목적·수집 항목·보유기간을 확인한 뒤 동의 여부를 선택하고 전자서명을 입력해 주세요.</p><p class="consentPolicyLink"><a href="./privacy.html" target="_blank" rel="noopener noreferrer">개인정보 처리방침 전체 보기 ↗</a></p><p class="minorConsentNotice">만 14세 미만 신청자는 첫 페이지에서 보호자(법정대리인)의 이름·추가 서명과 동의를 함께 작성해 주세요. 법정대리인 확인 문의는 운영기관 <span data-program-consent="center">해당 프로그램 운영기관</span>(문의전화 <span data-program-consent="phone">확인 중</span>)으로 문의해 주세요.</p></div><div id="consentItems" class="consentItems"></div><div class="signatureBlock"><label class="signatureField">전자서명 <input id="signature" placeholder="신청자 이름을 입력해 주세요"></label><p>서명일 <strong id="signatureDate"></strong></p></div><div class="formActions split"><button id="backInfo" type="button">이전</button><button class="primary" id="applySubmitButton" type="submit">동의 및 신청 완료</button></div></section>
+    </form>
+  </dialog>
+
+  <dialog id="applicationSuccessDialog" class="applicationSuccessDialog" aria-labelledby="applicationSuccessTitle">
+    <div class="applicationSuccessContent"><div class="successMark" aria-hidden="true">✓</div><h2 id="applicationSuccessTitle">신청이 완료되었습니다</h2><p id="applicationSuccessMessage">프로그램 신청 접수가 완료되었습니다.</p><button id="applicationSuccessClose" class="primary" type="button">확인</button></div>
+  </dialog>
+
+  <dialog id="adminDialog">
+    <div class="dialogTitle"><h2>관리자</h2><div class="adminHeaderActions"><div class="adminAccessibilityToolbar" role="group" aria-label="관리자 화면 이용 편의 설정"><button id="adminA11yTextSize" type="button" aria-pressed="false">큰 글씨</button><button id="adminA11yContrast" type="button" aria-pressed="false">색반전</button></div><button type="button" id="adminClose">닫기</button></div></div>
+    <section id="loginBox" class="loginBox"><label>관리자 이메일 <input id="adminUsername" autocomplete="username" placeholder="관리자 이메일 입력"></label><label>비밀번호 <input id="adminCode" type="password" autocomplete="current-password" placeholder="비밀번호 입력"></label><button class="primary" id="login" type="button">로그인</button><p>등록된 관리자 이메일과 비밀번호로 로그인해 주세요.</p></section>
+    <section id="adminPanel" class="hidden">
+      <div class="adminIdentity"><div><span id="adminRoleBadge"></span><strong id="adminIdentityText"></strong></div><button id="adminLogout" type="button">로그아웃</button></div>
+      <nav class="tabs" aria-label="관리자 메뉴"><button class="active" data-tab="programCreate" type="button">프로그램 등록</button><button data-tab="programManage" type="button">프로그램 관리</button><button data-tab="applicantManage" type="button">신청자 관리</button><button id="superTab" class="hidden" data-tab="superManage" type="button">최고관리자 설정</button></nav>
+      <section id="programManage">
+        <form id="programForm" class="adminForm">
+          <div class="formGrid">
+            <label>프로그램명 <input id="programTitle" required></label><label>복지관명 <input id="centerName" required placeholder="예: 부평장애인종합복지관"></label>
+            <label>이용료 <input id="fee" required placeholder="예: 무료 / 월 20,000원"></label><label>이용 연령 <select id="programAgeGroup" required><option value="">선택</option><option value="아동">아동</option><option value="청소년">청소년</option><option value="성인">성인</option><option value="전연령">전연령·가족</option><option value="__custom__">직접입력</option></select><input id="programAgeGroupCustom" class="hidden" placeholder="예: 만 18세 이상" aria-label="이용 연령 직접입력"></label>
+            <label>활동분류 <select id="programActivityCategory" required><option value="">선택</option></select></label><label>참여대상 유형 <select id="programAudienceType" required><option value="">선택</option></select></label><label>담당기관 연락처 <input id="contactPhone" type="tel" inputmode="tel" placeholder="예: 032-000-0000" required></label><label>홍보 홈페이지 주소 <span class="inlineFieldAction"><input id="detailUrl" type="url" placeholder="https://..."><button hidden style="display:none" data-feature="promotion-link-paused" id="extractPromotionLinkDraft" class="smallButton" type="button">링크 내용 자동입력</button></span></label>
+            <div class="wide promotionUploadField"><strong>홍보지</strong><input id="promotionImageFile" class="visuallyHidden" type="file" accept="image/jpeg,image/png,image/webp,image/gif,application/pdf,.pdf"><button id="addPromotionImages" class="smallButton addFileButton" type="button"><span aria-hidden="true">＋</span> 홍보지 선택</button><small>이미지 또는 PDF 홍보지를 1장만 등록할 수 있습니다. 10MB 이하</small></div>
+            <div class="wide promotionImageAdmin"><div id="promotionImageInfo" class="fileInfo promotionImageList">등록된 홍보지가 없습니다.</div><button id="extractPromotionDraft" class="smallButton" type="button">홍보지 내용 자동입력</button><button id="removePromotionImage" class="smallButton danger" type="button">홍보지 삭제</button></div><div id="promotionDraftStatus" class="wide promotionDraftStatus" aria-live="polite">이미지·PDF 홍보지를 이용해 프로그램 정보 초안을 자동으로 채울 수 있습니다.</div>
+            <label id="audienceDetailLabel">참여대상 상세 <input id="audience" required placeholder="기타 선택 시 직접 입력"></label><label>정원 <input id="capacity" type="number" min="0" required><small>0명으로 입력하면 인원 제한 없이 신청받습니다.</small></label>
+            <label class="wide">참여자 선정 방식 <select id="selectionMethod" required><option value="first_come">선착순 — 정원 이후 대기번호 부여</option><option value="lottery">추첨·배점 — 정원 초과 접수 허용</option><option value="open">표시 없음 — 누구나 참여</option></select></label>
+            <label>모집 시작일 <input id="startDate" type="date" required></label><label>모집 마감일 <input id="endDate" type="date" required></label>
+            <label>개인정보 보유기간(동의일 기준) <span class="yearInput"><input id="privacyRetentionYears" type="number" min="1" max="30" step="1" value="5" required><strong>년</strong></span></label>
+            <fieldset id="programDisabilityTypes" class="wide taxonomyFieldset"><legend>장애유형(복수 선택 가능)</legend><div id="programDisabilityTypeOptions" class="taxonomyChecks"></div></fieldset><label class="wide">운영 일정 <input id="schedule" required></label><label class="wide">프로그램 내용 <textarea id="description" rows="3" required></textarea></label>
+          </div>
+          <section class="adminConsentBox"><div class="sectionHead"><div><h3>개인정보 동의서 설정</h3><p>프로그램별 동의 항목을 설정할 수 있습니다.</p></div><label class="toggleLine"><input id="consentEnabled" type="checkbox"><span>개인정보 동의서 사용</span></label></div><div id="consentEditor" class="consentEditor"></div><div class="formActions"><button id="loadDefaultConsent" type="button">기본 동의서 불러오기</button></div></section>
+          <section class="adminGoogleFormBox"><div><h3>기관 Google 신청서 Form(선택)</h3><p>Form과 응답 Sheet는 기관 Google Drive에서 관리하며, 사이트에는 제출 여부만 전달됩니다.</p></div><div class="googleFormAutoCreate hidden"><strong>가장 간편한 방법</strong><button id="createGoogleFormConfig" class="primary" type="button">새 Google 신청서 자동 생성</button><p id="googleFormCreateStatus" class="fileHint" role="status" aria-live="polite">기존 Form이 없다면 새 신청서를 자동으로 만들 수 있습니다.</p><div id="googleFormCreatedLinks" class="googleFormCreatedLinks hidden"></div></div><details class="googleFormManual" open><summary>Google Form 주소로 연결</summary><div class="googleFormRequiredGuide"><strong>Form 주소를 입력한 뒤 최초 한 번만 연결합니다.</strong><p>프로그램 저장 후 기관 Google 계정에서 안전 연결을 승인하면 됩니다.</p></div><div class="googleFormSimpleConfig"><label>Google Form 주소<input id="googleFormUrl" type="url" placeholder="https://docs.google.com/forms/.../viewform"></label><input id="googleFormResponseSheetId" type="hidden"><button id="autoDetectGoogleFormConfig" class="primary hidden" type="button">기존 방식으로 연결</button><div class="googleFormConnectionActions"><button id="prepareInstitutionFormRelay" class="primary" type="button">기관 소유 Form 안전 연결</button><button id="openGoogleFormHelp" type="button">연결 방법 보기</button></div><p id="googleFormAutoStatus" class="fileHint" role="status" aria-live="polite">Google Form 주소를 입력하고 프로그램을 저장하면 연결 화면이 바로 이어집니다. 실제 답변은 기관 Drive에만 남습니다.</p></div><details class="googleFormAdvanced hidden"><summary>고급 설정(자동 연결이 안 될 때만 사용)</summary><div id="googleFormVerificationConfig" class="googleFormVerificationConfig"><input id="googleFormFileId" type="hidden"><label>확인번호 질문 entry 번호<input id="googleFormTokenEntry" inputmode="numeric" placeholder="예: entry.123456789"></label><label>응답 시트 탭 이름<input id="googleFormResponseTab" value="설문지 응답 1"></label><label>확인번호 열 제목<input id="googleFormTokenColumn" value="설문 확인번호"></label></div></details></details><p class="fileHint">최고관리자와 다른 기관 관리자는 실제 Google Form 답변이나 응답 Sheet를 볼 수 없습니다.</p></section><section class="adminFileBox"><div class="sectionHead"><div><h3>신청서 양식 파일 설정</h3><p>별도 신청서가 필요한 프로그램에 양식을 등록합니다.</p></div><label class="toggleLine"><input id="formEnabled" type="checkbox"><span>신청서 파일 제출 사용</span></label></div><div id="formEditor" class="formEditor"><label>신청서 안내 문구 <input id="formGuide"></label><label>신청서 양식 파일 <input id="templateFile" type="file" accept=".pdf,.hwp,.hwpx,.doc,.docx,.jpg,.jpeg,.png"></label><div id="templateFileInfo" class="fileInfo">등록된 양식 파일이 없습니다.</div><button id="removeTemplateFile" class="smallButton danger" type="button">양식 파일 삭제</button></div></section>
+          <div class="formActions split"><button id="resetProgram" type="button">초기화</button><button class="primary" type="submit">프로그램 저장</button></div>
+        </form>
+        <div id="adminProgramList" class="list"></div>
+      </section>
+      <section id="applicantManage" class="hidden"><div class="applicantTools"><div><h3>신청자 및 제출서류</h3><p>신청서 내용과 업로드 파일을 확인할 수 있습니다.</p></div><a id="assignedDriveLink" class="driveFolderLink hidden" href="#" target="_blank" rel="noopener noreferrer">담당 Google Drive 열기 ↗</a></div><div id="applicantList" class="list"></div></section>
+      <section id="superManage" class="hidden">
+        <div class="superGrid">
+          <form id="searchConfigForm" class="adminForm"><h3>상세검색 항목 관리</h3><p class="sectionHelp">각 항목을 한 줄에 하나씩 입력해 주세요. 저장하면 프로그램 등록과 상세검색에 함께 반영됩니다.</p><label>이용 연령 분류 <textarea id="configAgeGroups" rows="6"></textarea></label><label>프로그램 활동분류 <textarea id="configProgramCategories" rows="7"></textarea></label><label>장애유형 <textarea id="configDisabilityTypes" rows="10"></textarea></label><label>참여대상 유형 <textarea id="configAudienceTypes" rows="6"></textarea></label><label>복지관 목록 <textarea id="configCenters" rows="9"></textarea></label><div class="formActions"><button class="primary" type="submit">검색 항목 저장</button></div></form>
+          <div><form id="superPasswordForm" class="adminForm"><h3>최고관리자 비밀번호 변경</h3><p class="sectionHelp">변경 후에는 새 비밀번호로 다시 로그인해야 합니다.</p><div class="formGrid"><label class="wide">현재 비밀번호 <input id="currentSuperPassword" type="password" autocomplete="current-password" required></label><label>새 비밀번호 <input id="newSuperPassword" type="password" autocomplete="new-password" required minlength="8"></label><label>새 비밀번호 확인 <input id="confirmSuperPassword" type="password" autocomplete="new-password" required minlength="8"></label></div><div class="formActions"><button class="primary" type="submit">비밀번호 변경</button></div></form><form id="managerForm" class="adminForm"><h3>복지관 담당자 지정</h3><div class="formGrid"><label>담당자 이름 <input id="managerName" required></label><label>관리자 아이디 <input id="managerUsername" required></label><label>비밀번호 <input id="managerPassword" type="password" required minlength="4"></label><label>담당 복지관 <select id="managerCenter" required></select></label><label class="wide">담당자 Google Drive 폴더 주소 <input id="managerDriveUrl" type="url" required placeholder="https://drive.google.com/drive/folders/..."></label></div><div class="formActions"><button class="primary" type="submit">담당자 계정 추가</button></div></form><div id="managerList" class="list"></div></div>
+        </div>
+      </section>
+    </section>
+  </dialog>
+  <script src="./assets/supabase-js-2.min.js?v=109"></script>
+  <script src="/config.local.js"></script>
+  <script src="./supabase-config.js?v=109"></script>
+  <script src="./app.js?v=109"></script>
+  <script src="./application-file-upload.js?v=109"></script>
+  <script src="./program-fields.js?v=109"></script>
+  <script src="./enhancements.js?v=109"></script>
+  <script src="./admin-workflow.js?v=109"></script>
+  <script src="./auth.js?v=109"></script>
+  <script src="./print-tools.js?v=109"></script>
+  <script src="./manager-directory.js?v=109"></script>
+  <script src="./supabase-integration.js?v=109"></script>
+  <script src="./draft-fields.js?v=109"></script>
+  <script src="./google-form-promotion.js?v=109"></script>
+  <script src="./program-taxonomy.js?v=109"></script>
+  <script src="./admin-settings.js?v=109"></script>
+  <script src="./responsive-search.js?v=109"></script>
+  <script src="./accessible-date-inputs.js?v=109"></script>
+  <script src="./accessibility.js?v=109"></script>
+  <script src="./policy-settings.js?v=109"></script>
+  <script src="./schedule-editor.js?v=109"></script>
+<dialog id="googleFormHelpDialog" class="modal googleFormHelpDialog"><form method="dialog"><div class="googleFormHelpHead"><div><span class="stepEyebrow">기관담당자 안내</span><h2>Google 신청서 연결 방법</h2><p>새 Google Form마다 최초 한 번만 아래 순서로 연결합니다.</p></div><button value="close" class="modalClose" aria-label="안내 닫기">×</button></div><ol class="googleFormHelpSteps"><li><strong>기관 Google 계정으로 Form 만들기</strong><span>Form의 응답 탭에서 응답 스프레드시트도 연결합니다.</span></li><li><strong>Form 주소 입력 후 프로그램 저장</strong><span>이 화면에 Google Form 주소를 입력하고 프로그램 저장을 누릅니다.</span></li><li><strong>연결 코드 복사</strong><span>저장 직후 열리는 최초 1회 연결 창에서 연결 코드를 복사합니다.</span></li><li><strong>Form의 Apps Script에 붙여넣기</strong><span>Google Form의 더보기(⋮) → 스크립트 편집기에서 기존 코드를 지우고 붙여넣은 뒤 저장합니다.</span></li><li><strong>setupNurimConnection 1회 실행</strong><span>함수 목록에서 setupNurimConnection을 선택해 실행하고 기관 Google 계정으로 권한을 허용합니다. 배포 → 새 배포는 하지 않습니다.</span></li><li><strong>테스트 제출 확인</strong><span>신청서를 실제 제출한 뒤 사이트의 신청서 제출 확인이 완료되는지 확인합니다.</span></li></ol><div class="googleFormHelpNotice"><strong>기억하세요</strong><p>같은 Form은 다시 연결하지 않습니다. Form 주소를 다른 Form으로 바꾼 경우에만 새로 연결합니다.</p></div><div class="dialogActions"><a class="buttonLink" href="./manual/google-form-connection-guide.html" target="_blank" rel="noopener">연결 매뉴얼 전체 보기 ↗</a><button value="close" class="primary">확인</button></div></form></dialog><dialog id="institutionFormRelayDialog" class="modal"><form method="dialog"><h2>기관 Google Form 최초 1회 연결</h2><p>아래 코드를 복사한 뒤 기관 Form의 Apps Script에 붙여넣고 <strong>setupNurimConnection</strong>을 한 번 실행하세요.</p><div class="relayNextSteps"><strong>코드 복사 후 할 일</strong><span>Form 더보기(⋮) → 스크립트 편집기 → 기존 코드 삭제 → 붙여넣기 → 저장 → setupNurimConnection 선택 → 실행 → 권한 허용</span><em>Apps Script의 배포 → 새 배포는 누르지 않습니다.</em></div><textarea id="institutionFormRelayCode" readonly rows="16" style="width:100%;font-family:monospace"></textarea><p id="institutionFormRelayCopyStatus" class="copyStatus" role="status" aria-live="polite">연결 코드 복사를 누른 뒤 복사 완료 안내를 확인하세요.</p><div class="dialogActions"><button id="copyInstitutionFormRelayCode" type="button" class="primary">연결 코드 복사</button><button value="close">닫기</button></div></form></dialog>
+<script src="/responsive-layout.js?v=109"></script>
+<script src="/feature-config.js"></script>
+<script src="/survey-public-key.js"></script><script type="module" src="/survey-admin.mjs?v=109"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

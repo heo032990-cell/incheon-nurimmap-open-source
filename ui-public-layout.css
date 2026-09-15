@@ -1,0 +1,85 @@
+/* Warm Incheon illustrated public surface. All interactive controls remain HTML. */
+#searchConfigForm>.activitySetting{grid-column:1/-1}#searchConfigForm .activitySettingBody{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);align-items:start}@media(max-width:700px){#searchConfigForm .activitySettingBody{grid-template-columns:1fr}}
+.superGrid #searchConfigForm{align-items:start!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}.compactSetting{min-width:0;border:1px solid #d5e2de;border-radius:14px;background:#fff;overflow:hidden;align-self:start}.compactSetting>summary{cursor:pointer;padding:16px;color:#234c40;background:#f3f8f5;line-height:1.6;min-height:52px}.compactSetting>summary strong{font-size:16px}.compactSetting>summary span{display:block;font-size:13px;color:#4e635a;margin-left:18px}.compactSetting>summary:focus-visible{outline:3px solid #245f4e;outline-offset:-3px}.compactSetting[open]>summary{border-bottom:1px solid #d5e2de}.compactSettingBody{padding:16px;display:grid;gap:14px;min-width:0}#searchConfigForm .compactSettingBody>label{display:flex;flex-direction:column;justify-content:flex-start;gap:8px}#searchConfigForm textarea{height:136px;min-height:100px!important;max-height:240px!important;resize:vertical}#activityIconSaveStatus{grid-column:1/-1;margin:0;line-height:1.6}#activityIconSaveStatus:empty{display:none}#iconSelectionPreview{padding:10px;border-radius:8px;background:#edf6ee;color:#234c40;overflow-wrap:anywhere}.activityIcon{font-family:'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif}#superPasswordForm,#managerForm{padding:0}#superPasswordForm>.compactSetting,#managerForm>.compactSetting{border:0}.compactSetting .formActions{margin-top:0}html.a11yHighContrast .compactSetting>summary,html.a11yHighContrast #iconSelectionPreview{background:#000!important;color:#fff!important}@media(max-width:700px){.superGrid #searchConfigForm{grid-template-columns:1fr!important}.compactSettingBody{padding:12px}.compactSetting>summary{padding:13px}}
+.activityIconSettings{min-width:0;border:1px solid #cbd5ca;border-radius:12px;padding:14px;margin:0}.activityIconSettings p{font-size:14px;line-height:1.6}.activityIconSettings>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px}.activityIconSettings label{display:flex;flex-direction:column;gap:6px;min-width:0}.activityIconSettings label span{overflow-wrap:anywhere}.activityIconSettings select{width:100%;min-height:44px}.activityIconSettings select:focus-visible{outline:3px solid #245f4e;outline-offset:2px}
+body{background:#fcfaf4;color:#303647}
+.topbar{display:block;position:relative;width:100%;max-width:1680px;margin:0 auto;padding:0;min-height:0;background:#fcfaf4;border-radius:0;overflow:visible}
+.heroScenery{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.heroContent{position:absolute;inset:0 0 auto;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:clamp(22px,3vw,48px) clamp(22px,3.5vw,58px)}
+.heroContent .brandBlock{background:transparent;padding:0;border:0;box-shadow:none;gap:20px;align-items:center;max-width:70%}
+.heroContent .brandBlock>div{min-width:0}.heroContent .brandLogo{width:68px;height:68px;flex:0 0 68px}
+.heroContent .brandLogo img{width:100%;height:auto}.heroContent h1{font-size:clamp(34px,3.3vw,54px);color:#2d3045;letter-spacing:-.04em;line-height:1.2}
+.heroContent .brandBlock p{color:#353a45;font-size:clamp(13px,1.15vw,17px);margin:0 0 10px;word-break:keep-all}
+.heroContent .brandBlock .brandTagline{margin:14px 0 0;font-weight:400;font-size:clamp(12px,1vw,16px)}
+.heroContent .headerUtilities{background:transparent;padding:0;margin:4px 0 0;align-self:flex-start;gap:8px;flex-shrink:0}
+.heroContent button{background:#ffffffed;color:#34384c;border:1px solid #cfd2d8;border-radius:12px;min-height:44px;box-shadow:0 2px 4px #24332b06}
+.betaBadge{background:#f18435;color:#fff;border:0}
+main{width:calc(100% - 32px);max-width:1648px;margin:0 auto;padding:24px 24px 30px;border-radius:28px 28px 0 0;background:#fff}
+.betaNotice{background:#fff9e8;border:1px solid #efc981;border-radius:14px;padding:16px 20px;box-shadow:none;color:#674a25;gap:20px;word-break:keep-all}
+.betaNotice strong{color:#835009;white-space:nowrap}.betaNotice strong:before{content:'◖';color:#ed922e;margin-right:10px}.betaNotice p{color:#674a25;line-height:1.6}
+.searchPanel{border:1px solid #dce5d6;border-radius:22px;background:linear-gradient(115deg,#fff,#fafdfb);padding:24px;box-shadow:0 3px 9px #3159390b}
+.searchHeading p{color:#4f5661}.searchHeading h2{color:#2d3045;font-size:26px}.searchHeading h2:after{content:' 🌱';font-size:20px}
+.searchHeadingActions button{border-radius:12px;background:#fff;border-color:#dfe3e6;color:#365575;box-shadow:0 2px 5px #263c3510}
+.searchPanel .filters{border:0;background:transparent;box-shadow:none;padding:0;margin-top:18px}
+.searchPanel label{color:#414752}.searchPanel :is(input,select){background:#fff;border:1px solid #dce1e5;border-radius:12px;box-shadow:0 2px 4px #23362d04;min-height:46px;color:#303647}
+.activityCategoryTabs{margin:20px 0;padding:16px 24px;border:1px solid #d5e2cd;border-radius:18px;background:#fcfefb;box-shadow:0 2px 5px #31593908}
+.activityCategoryTabs strong{color:#323b4e}.activityCategoryTabs button{display:inline-flex;align-items:center;gap:9px;border-radius:999px;background:#fff;border:1px solid #dfe3e6;color:#394256;padding:9px 16px;min-height:42px}
+.activityCategoryTabs button.active{background:#438954;border-color:#438954;color:#fff;box-shadow:none}.activityIcon{font-size:19px;line-height:1;color:#41866f}.active .activityIcon{color:#fff4b2}
+.resultBanner{position:relative;isolation:isolate;display:grid;place-items:center;border-radius:22px;overflow:hidden;background:#f0f4eb;min-height:170px;margin:20px 0}
+.harborScenery{position:absolute;left:0;bottom:0;width:auto;height:100%;max-width:none;object-fit:contain;clip-path:inset(0 60% 0 0);z-index:-1;pointer-events:none}
+.harborRight{left:auto;right:0;clip-path:inset(0 0 0 60%)}
+.resultBannerCopy{width:min(74%,780px);padding:20px 24px;text-align:center;border-radius:18px;background:#f7faf0eb;margin:20px auto}
+.resultBanner .resultSummary{padding:0;margin:0;background:transparent;border:0;color:#2b554b;font-size:20px;font-weight:700;line-height:1.5;word-break:keep-all}
+.resultGuide{margin:10px 0 0;color:#52695b;font-size:14px;line-height:1.6;word-break:keep-all}
+.card{background:#fff;border:1px solid #dce5dc;box-shadow:0 5px 18px #27432c0a}.card .programContentBox{background:#f2f8f5;border-color:#a8cbbb}.card .programContentBox>span{color:#356c5b}
+.card .primary{background:#277c70;box-shadow:0 4px 10px #277c7020}.card .primary:hover{background:#1d655b}.card .detailLink{border-color:#95bcaa;color:#286653}
+.applicationLookup{background:#fafcf8;border-color:#dce5d6;border-radius:20px}.siteFooter{background:#f5f4ed;border-color:#e1e3d7}
+html.a11yLargeText .topbar{min-height:0}html.a11yLargeText .heroContent{position:static;flex-wrap:wrap}html.a11yLargeText .heroContent .brandBlock{max-width:100%}
+html.a11yHighContrast :is(.heroScenery,.harborScenery){display:none}html.a11yHighContrast .heroContent{position:static}html.a11yHighContrast .resultBanner{min-height:0}
+@media(max-width:1024px){.heroContent{position:static;padding:22px 24px}.topbar{display:flex;flex-direction:column}.heroContent{order:0}.heroScenery{order:1}.heroContent .brandBlock{max-width:100%}.heroContent .brandLogo{width:52px;height:52px;flex-basis:52px}.heroContent h1{font-size:34px}.heroContent .brandTagline{display:block}.heroContent .headerUtilities{flex-shrink:1}.resultBanner{min-height:150px}}
+@media(max-width:700px){
+ .heroContent{flex-direction:column;gap:18px;padding:20px 18px 10px}.heroContent .brandBlock{gap:12px;max-width:100%;width:100%}.heroContent h1{font-size:clamp(27px,7.5vw,36px)}.heroContent .brandLogo{width:42px;height:42px;flex-basis:42px}.heroContent .brandBlock p{font-size:12px;margin-bottom:7px}.heroContent .brandBlock .brandTagline{margin-top:9px;font-size:12px;line-height:1.5}
+ .heroContent .headerUtilities{align-self:flex-end;gap:7px;margin:0}.heroContent button{font-size:13px;padding:8px 12px}.heroScenery{margin:0;min-height:0}
+ main{width:100%;padding:18px 12px;border-radius:22px 22px 0 0}.betaNotice{padding:14px;gap:7px}.betaNotice strong{white-space:normal}.searchPanel{padding:18px 12px;border-radius:18px}.searchHeading h2{font-size:23px}.searchPanel .filters{margin-top:14px}.searchHeadingActions button{font-size:12px;min-height:44px}
+ .activityCategoryTabs{padding:14px 12px;gap:10px}.activityCategoryTabs button{padding:8px 11px;font-size:13px;gap:6px}.activityIcon{font-size:16px}
+ .resultBanner{min-height:150px;margin:16px 0}.resultBannerCopy{width:calc(100% - 36px);padding:14px 12px;margin:20px auto;background:#f7faf0f2}.resultBanner .resultSummary{font-size:16px}.resultGuide{font-size:12px}.harborScenery{opacity:.65}
+}
+@media(forced-colors:active){.heroScenery,.harborScenery{display:none}.heroContent{position:static}.resultBannerCopy{border:1px solid CanvasText}}
+
+/* Compact hero base; the full-width landscape override below controls v69. */
+.topbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:0}
+.heroContent{position:static;grid-column:1;grid-row:1;display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:24px 32px}
+.heroScenery{grid-column:2;grid-row:1;width:100%;height:auto;max-height:none;align-self:center}
+.heroContent .brandBlock{max-width:100%;gap:14px}.heroContent .brandLogo{width:50px;height:50px;flex-basis:50px}.heroContent h1{font-size:clamp(28px,3vw,44px)}
+.heroContent .brandBlock p{font-size:13px;margin-bottom:7px}.heroContent .brandBlock .brandTagline{font-size:13px;margin-top:9px}.heroContent .headerUtilities{align-self:flex-start;margin:0 0 0 64px}
+.resultBanner{min-height:120px;margin:14px 0}.resultBannerCopy{margin:12px auto;padding:12px 20px}.resultGuide{margin-top:6px}
+.siteFooter{background:#f5f4ed;color:#30453c;border-top:1px solid #cbd5ca}
+.siteFooter a,.siteFooter a.privacyLink,.siteFooter a:visited{color:#234c40;text-decoration:underline;text-underline-offset:4px;font-weight:700;line-height:1.6;display:inline-flex;align-items:center;min-height:44px}
+.siteFooter p,.siteFooter strong,.siteFooter span{color:#30453c;opacity:1}.siteFooter a:hover{color:#102f26}.siteFooter a:focus-visible{outline:3px solid #245f4e;outline-offset:4px;border-radius:4px}
+html.a11yHighContrast .siteFooter a,html.a11yHighContrast .siteFooter a:visited{background:#ffdf00!important;color:#000!important}
+html.a11yHighContrast .siteFooter :is(p,strong,span){color:#fff!important}
+html.a11yLargeText .topbar{display:block}html.a11yLargeText .heroScenery{width:min(100%,480px);margin:0 auto}
+@media(max-width:700px){
+ .topbar{display:flex;flex-direction:column;gap:0}.heroContent{width:100%;padding:16px 18px 6px;gap:10px}.heroContent .brandBlock{gap:10px}.heroContent .brandLogo{width:38px;height:38px;flex-basis:38px}.heroContent h1{font-size:28px}.heroContent .brandBlock p{font-size:12px}.heroContent .brandBlock .brandTagline{font-size:12px;margin-top:6px}.heroContent .headerUtilities{align-self:flex-end;margin:0}.heroScenery{width:min(100%,288px);margin:0 auto}
+ .resultBanner{min-height:110px}.resultBannerCopy{padding:10px 12px}.siteFooter{padding:20px 18px}.siteFooter nav{gap:6px 16px}.siteFooter a{font-size:15px}.siteFooter p{font-size:14px;line-height:1.7;word-break:keep-all}
+}
+
+/* v69: shallow full-width scenery, not two large side-by-side panels. */
+.topbar{display:block;isolation:isolate;min-height:0;overflow:hidden}
+.heroScenery{position:absolute;inset:0;width:100%;height:100%;margin:0;object-fit:cover;object-position:center 76%;z-index:-2}
+.topbar:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#fcfaf4 0%,#fcfaf4f5 28%,#fcfaf4b8 43%,#fcfaf400 65%);z-index:-1;pointer-events:none}
+.heroContent{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:space-between;min-height:190px;padding:22px 32px;gap:20px}
+.heroContent .brandBlock{max-width:75%}.heroContent .headerUtilities{align-self:flex-start;margin:0;flex-wrap:wrap;justify-content:flex-end}
+.resultBanner{min-height:0;margin:10px 0;border-radius:16px}
+.harborScenery{width:100%;height:100%;object-fit:cover;object-position:center 65%;clip-path:none;opacity:.75}
+.harborRight{display:none}
+.resultBannerCopy{width:auto;max-width:calc(100% - 32px);margin:8px auto;padding:5px 24px;background:#f7faf0f5;border-radius:12px}
+.resultBanner .resultSummary{font-size:18px}.resultGuide{margin:2px 0 0;font-size:13px;line-height:1.5}
+@media(max-width:1024px){.heroContent{min-height:174px;padding:18px 24px}.heroContent .brandBlock{max-width:70%}.heroContent .headerUtilities{max-width:210px}.topbar:after{background:linear-gradient(90deg,#fcfaf4fa,#fcfaf4d9 50%,#fcfaf433)}}
+@media(max-width:700px){
+ .heroContent{min-height:0;flex-direction:column;align-items:stretch;padding:14px 18px;gap:10px}.heroContent .brandBlock{max-width:100%}.heroContent .headerUtilities{max-width:none;align-self:flex-end}.heroContent .brandBlock .brandTagline{margin-top:5px}.heroScenery{width:100%;height:100%;object-position:60% 78%}.topbar:after{background:#fcfaf4dc}
+ .resultBannerCopy{max-width:calc(100% - 20px);padding:5px 10px;margin:6px auto}.resultBanner .resultSummary{font-size:15px}.resultGuide{font-size:12px}
+}
+html.a11yLargeText .heroContent{flex-wrap:wrap;height:auto;min-height:0}html.a11yLargeText .heroScenery{width:100%;height:100%;margin:0}html.a11yLargeText .heroContent .brandBlock{max-width:100%}html.a11yLargeText .heroContent .headerUtilities{max-width:none;margin:0}
+html.a11yHighContrast .topbar:after{display:none}
+@media(forced-colors:active){.topbar:after{display:none}}

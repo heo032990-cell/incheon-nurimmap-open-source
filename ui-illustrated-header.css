@@ -1,0 +1,41 @@
+/* v66: illustrated Incheon header, aligned cards, accessible responsive forms. */
+body{background:#fcfcf8}
+.topbar{position:relative;max-width:none;min-height:330px;padding:46px max(24px,calc((100vw - 1480px)/2));align-items:flex-start;background:#fcf8ef url('./assets/incheon-waterfront.png') center bottom/cover no-repeat;border:0;box-shadow:none}
+.topbar:before{display:none}
+.brandBlock{position:relative;padding:12px;border-radius:16px;background:rgba(255,253,246,.88)}
+.brandBlock h1{color:#292d45}.headerUtilities{background:rgba(255,253,246,.93);padding:8px;border-radius:12px}
+main{position:relative;margin-top:0;background:#fff;border-radius:26px 26px 0 0;padding-top:24px}
+.searchPanel,.activityCategoryTabs{border-color:#dce7d7;border-radius:18px;box-shadow:0 3px 10px #304a2510}
+.activityCategoryTabs button{border-radius:24px}.activityCategoryTabs button.active{background:#398453;border-color:#398453;color:#fff}
+.resultSummary{padding:22px 24px;border-radius:16px;background:#edf4ed;color:#244b3d;text-align:center}
+.card{border-top:1px solid #d6e5ef;border-radius:16px}.card h2{line-height:1.45;overflow-wrap:anywhere}
+.card .programContentBox{box-sizing:border-box;margin:12px 0 18px;flex:none}
+.card .programContentBox>div{height:6.4em!important;min-height:6.4em!important;max-height:6.4em!important;line-height:1.6!important;overflow-y:auto;scrollbar-gutter:stable;overscroll-behavior:contain}
+.card .programContentBox>div p{margin:0}.card .meta{margin-top:0}.card .meta>div{align-items:start}.card .meta dd{overflow-wrap:anywhere}.scheduleValue{white-space:pre-line}
+.card .cardActions{margin-top:auto;padding-top:16px}
+.formGrid{align-items:start}.formGrid>label{display:flex;flex-direction:column;justify-content:flex-start;gap:8px;min-width:0;align-self:start}
+.formGrid>label>input,.formGrid>label>select{margin:0;min-height:46px}.formGrid>label>small{margin:0}
+.operationSchedule{margin:0;padding:16px;border:1px solid #d5e3e9;border-radius:12px;min-width:0}
+.operationDates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.operationSchedule label{display:flex;flex-direction:column;gap:8px;min-width:0}.operationSchedule input{width:100%;min-width:0}
+.scheduleHint{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:10px 0 16px}.scheduleHint button{font-size:.85em;white-space:nowrap}.scheduleHint small{color:#526b7a}
+html.a11yHighContrast .topbar{background:#000!important}html.a11yHighContrast .brandBlock,html.a11yHighContrast .headerUtilities{background:#000!important}html.a11yHighContrast .resultSummary{background:#000!important;color:#fff!important}
+@media(max-width:700px){.topbar{min-height:275px;padding:22px 16px 100px;background-position:center 60%;background-size:auto 480px;flex-wrap:wrap;gap:12px}.brandBlock{padding:8px;max-width:100%}.headerUtilities{margin-left:auto}.topbar h1{font-size:clamp(25px,7vw,36px)}main{border-radius:20px 20px 0 0}.operationDates{grid-template-columns:1fr;gap:14px}.scheduleHint{align-items:start;flex-direction:column}.card .programContentBox>div{font-size:1em}}
+html.a11yLargeText .topbar{min-height:360px;flex-wrap:wrap}html.a11yLargeText .operationDates{grid-template-columns:1fr}
+@media(forced-colors:active){.topbar{background:none}.programContentBox,.resultSummary{border:1px solid CanvasText}}
+
+/* Keep Korean words together; only break an overlong token when it cannot fit. */
+.card :is(h2,p,dd,dt,.programContentBox,.programContentBox div,.programContentBox li,.programContentBox span){word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.card h2{text-wrap:pretty}.card .meta>div{grid-template-columns:5.2em minmax(0,1fr)}
+.card .meta dt{white-space:nowrap}.card .meta dd{min-width:0}
+.searchHeading,.searchHeading>div,.searchHeadingActions{min-width:0;max-width:100%}
+@media(max-width:700px){
+ .topbar{display:flex;flex-direction:column;align-items:stretch;min-height:300px;padding:18px 16px 110px;background-position:60% bottom}
+ .brandBlock{align-items:center;gap:10px}.brandBlock>div{min-width:0}.brandBlock p{font-size:12px;word-break:keep-all}.brandLogo{flex:0 0 42px;width:42px;height:42px}.brandLogo img{max-width:100%;height:auto}
+ .brandTitleLine{flex-wrap:wrap;gap:6px}.headerUtilities{align-self:flex-end;margin:0;gap:6px}.headerUtilities button{min-height:44px;padding:8px 12px}
+ main{padding:18px 12px}.betaNotice{padding:14px;word-break:keep-all;overflow-wrap:anywhere}
+ .searchPanel{padding:16px 12px}.searchHeading{display:flex;flex-direction:column;align-items:stretch;gap:12px}.searchHeadingActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;width:100%}.searchHeadingActions button{min-width:0;white-space:normal;word-break:keep-all;padding:8px 6px;min-height:44px}
+ .activityCategoryTabs{padding:12px;gap:10px}.activityCategoryTabs>div{display:flex;flex-wrap:wrap;gap:7px}.activityCategoryTabs button{min-height:42px;padding:8px 12px}
+ .card{padding:16px;min-width:0}.card .programLabels{gap:8px;flex-wrap:wrap}.card .programTagGroup{margin-left:auto}.card .programContentBox{padding:14px}.card .meta>div{gap:8px}.card .cardActions{gap:8px}.cardActions>a,.cardActions>button{min-height:46px;word-break:keep-all;padding:10px 8px}
+ .operationSchedule{padding:12px}.operationDates .scrollDateInput{max-width:100%;min-width:0}
+}
+@media(max-width:360px){.topbar h1{font-size:25px}.betaBadge{font-size:10px}.card .meta>div{grid-template-columns:4.5em minmax(0,1fr)}.card .cardTop{flex-wrap:wrap;gap:6px}.card .count{margin-left:auto}}

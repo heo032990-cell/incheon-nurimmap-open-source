@@ -1,0 +1,30 @@
+.managerDirectoryTop{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0;align-items:stretch}
+.managerDirectoryTop #programOwnershipTool,.managerDirectoryTop #managerDirectoryControls{margin:0;padding:18px;border:1px solid #c8d8ca;border-radius:14px;background:#f8fbf6;min-width:0;min-height:174px;box-shadow:none}
+.managerDirectoryTop h3{margin:0 0 6px;font-size:18px}.managerDirectoryTop p{margin:0;line-height:1.6;color:#4c6257;font-size:14px}
+.managerDirectoryTop #programOwnershipTool{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:1fr auto;gap:14px}
+.managerDirectoryTop .ownershipHeader{display:contents}.managerDirectoryTop .ownershipHeader>div:first-child{grid-column:1/-1}
+.managerDirectoryTop .ownershipActions{grid-column:2;grid-row:2;display:flex;align-self:end}
+.managerDirectoryTop #programOwnerAuditResult{grid-column:1;grid-row:2;align-self:center;min-width:0}
+.managerDirectoryTop #programOwnerAuditResult .empty{margin:0;padding:0;border:0;background:transparent;box-shadow:none;text-align:left;font-size:14px}
+.managerDirectoryTop button{min-height:44px;white-space:nowrap}
+.managerDirectoryTop #managerDirectoryControls{display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;text-align:left;gap:16px}
+.directoryCenter{display:grid!important;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:16px}.directoryCenter select{min-height:44px;width:100%}
+.managerDirectoryTop:has(.ownershipFilterRow){grid-template-columns:1fr}.managerDirectoryTop #programOwnershipTool:has(.ownershipFilterRow){display:block}.managerDirectoryTop #programOwnershipTool:has(.ownershipFilterRow) .ownershipHeader{display:flex}
+.managerDirectoryShell{grid-column:1/-1;border:1px solid #c8d8ca;border-radius:14px;padding:18px;min-width:0}
+.directoryTitle{margin:0 0 16px}.directoryToolbar{display:grid;grid-template-columns:minmax(0,1fr) auto 160px;gap:12px;align-items:center}.directorySearch input,.directorySize select{width:100%;min-height:44px}
+#managerDirectoryShell,#globalConsentEditor{padding:0}
+#managerDirectoryShell>.directoryTitle,#globalConsentEditor>.consentToggle{cursor:pointer;padding:18px;margin:0;background:#f0f6ec;color:#234c40;min-height:52px;line-height:1.6;font-weight:700;border-radius:12px}
+#managerDirectoryShell[open]>.directoryTitle,#globalConsentEditor[open]>.consentToggle{border-bottom:1px solid #c8d8ca;border-radius:12px 12px 0 0}
+.directoryBody,.consentBody{padding:18px}
+#globalConsentEditor>.consentToggle small{font-weight:400;display:block;margin-left:18px}
+#managerDirectoryShell>summary:focus-visible,#globalConsentEditor>summary:focus-visible{outline:3px solid #245f4e;outline-offset:-3px}
+html.a11yHighContrast #managerDirectoryShell>summary,html.a11yHighContrast #globalConsentEditor>summary{background:#000!important;color:#fff!important}
+.directoryCount{font-size:14px;line-height:1.6;margin:12px 0;color:#4c6257}
+.directoryColumnHead,#managerList .managerSummary{display:grid;grid-template-columns:minmax(80px,.8fr) minmax(0,1.5fr) minmax(0,1.6fr) 104px;gap:14px;align-items:center}
+.directoryColumnHead{padding:12px 16px;background:#f0f6ec;font-weight:700;border-bottom:1px solid #c8d8ca}
+#managerDirectoryShell #managerList{display:block;margin:0}#managerDirectoryShell #managerList .accountRow{margin:0;border:0;border-bottom:1px solid #dce5dc;border-radius:0;background:#fff}#managerDirectoryShell #managerList .accountRow[hidden]{display:none!important}
+#managerDirectoryShell .managerSummary{padding:10px 16px;min-height:64px}.directoryInstitution,.directoryEmail,.directoryName{overflow-wrap:anywhere;min-width:0;font-size:15px}.directoryEmail{color:#315947}.managerSummaryAction{text-align:center;min-height:40px;display:flex;align-items:center;justify-content:center}
+.directoryPagination{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px}.directoryPagination button{min-width:44px;min-height:44px}.directoryPagination [aria-current]{background:#287344;color:#fff}
+.directoryFootnote{text-align:center;font-size:13px;color:#4c6257;margin:16px 0 0;line-height:1.6}.directoryEmpty{text-align:center;padding:24px}.directoryEmpty[hidden],.directoryPagination[hidden]{display:none}
+@media(max-width:760px){.managerDirectoryTop{grid-template-columns:1fr}.directoryToolbar{grid-template-columns:minmax(0,1fr) auto}.directorySearch{grid-column:1/-1}.directoryColumnHead{display:none}#managerList .managerSummary{grid-template-columns:minmax(0,1fr) 96px;gap:5px 12px}#managerList .directoryName,#managerList .directoryInstitution,#managerList .directoryEmail{grid-column:1}#managerList .managerSummaryAction{grid-column:2;grid-row:1/4}.managerDirectoryShell{padding:12px}.directoryToolbar .directorySize{grid-column:2}.directoryToolbar>button{grid-column:1}.directoryCenter{gap:10px}}
+html.a11yHighContrast .directoryColumnHead,html.a11yHighContrast .directoryEmail,html.a11yHighContrast .directoryCount,html.a11yHighContrast .directoryFootnote{background:#000!important;color:#fff!important}

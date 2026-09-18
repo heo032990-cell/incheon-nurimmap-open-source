@@ -1,6 +1,6 @@
 # 인천 누림지도 · 공개 소스
 
-> **운영진 검토용:** [실제 운영 소스 보기](https://github.com/heo032990-cell/incheon-nurimmap-open-source/tree/codex/production-v109-review) · 공개판과 운영판은 설정과 일부 구성에 차이가 있습니다.
+> **운영진 검토용:** [실제 운영 소스 보기](https://github.com/heo032990-cell/incheon-nurimmap) · 공개판과 운영판은 설정과 일부 구성에 차이가 있습니다.
 
 현재 최신 버전은 **v109**입니다. 관리자 전용 페이지와 설문 좌우 미리보기·페이지 구분·끌어 이동·안내 동의 통합을 지원합니다. [변경 및 적용 안내](docs/CURRENT_VERSION.md)를 확인하세요.
 
